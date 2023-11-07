@@ -32,11 +32,12 @@ function dropDownFunc(dropDown) {
         if (e.type == "mouseover" && !!this.nextElementSibling ) {
           // Close the opend dropdown
           closeDropdown();
+          this.querySelector(".arrow_down").classList.remove("rotate");
   
           // add the open and active class(Opening the DropDown)
           this.parentElement.classList.add("dropdown-open");
           this.nextElementSibling.classList.add("dropdown-active");
-          // this.querySelector(".arrow_down").classList.add("rotate");
+          this.querySelector(".arrow_down").classList.add("rotate");
         }
       }
       
@@ -102,19 +103,83 @@ document
   });
 
 $(function () {
-  // slider banner
 
-  var owl = $(".owl-carousel-one").owlCarousel({
+  // slider banner
+  var owlBanner = $(".banner-carousel").owlCarousel({
     dots: true,
+    loop: true,
     items: 1,
   });
-  $(".next-slide").click(function () {
-    console.log('next');
-    owl.trigger("next.owl.carousel");
+  $(".slider-banner .next-slide").click(function () {
+    owlBanner.trigger("next.owl.carousel");
   });
-  $(".prev-slide").click(function () {
+  $(".slider-banner .prev-slide").click(function () {
+    owlBanner.trigger("prev.owl.carousel");
+  });
+
+  // slider categories
+  var owlCategories = $(".categories-carousel").owlCarousel({
+    dots: true,
+    loop: true,
+    margin: 30,
+    autoWidth: true,
+    items:1,
+  });
+  $(".slider-categories .next-slide").click(function () {
+    console.log('next');
+    owlCategories.trigger("next.owl.carousel");
+  });
+  $(".slider-categories .prev-slide").click(function () {
     console.log('prev');
-    owl.trigger("prev.owl.carousel");
+    owlCategories.trigger("prev.owl.carousel");
+  });
+
+  //slider popular
+  var owlPopular = $(".popular-carousel").owlCarousel({
+    dots: true,
+    loop: true,
+    margin: 30,
+    items:4,
+  });
+  $(".slider-popular .next-slide").click(function () {
+    console.log('next');
+    owlPopular.trigger("next.owl.carousel");
+  });
+  $(".slider-popular .prev-slide").click(function () {
+    console.log('prev');
+    owlPopular.trigger("prev.owl.carousel");
+  });
+
+  //slider new
+  var owlNew = $(".new-carousel").owlCarousel({
+    dots: true,
+    loop: true,
+    margin: 30,
+    items:4,
+  });
+  $(".slider-new .next-slide").click(function () {
+    console.log('next');
+    owlNew.trigger("next.owl.carousel");
+  });
+  $(".slider-new .prev-slide").click(function () {
+    console.log('prev');
+    owlNew.trigger("prev.owl.carousel");
+  });
+
+  // slider advantages
+  var owlAdvantages = $(".advantages-carousel").owlCarousel({
+    dots: true,
+    loop: true,
+    autoWidth: true,
+    items:1,
+  });
+  $(".slider-advantages .next-slide").click(function () {
+    console.log('next');
+    owlAdvantages.trigger("next.owl.carousel");
+  });
+  $(".slider-advantages .prev-slide").click(function () {
+    console.log('prev');
+    owlAdvantages.trigger("prev.owl.carousel");
   });
 
 
