@@ -1,0 +1,155 @@
+$icomoon-font-family: "BeautySystemaIcons" !default;
+$icomoon-font-path: "fonts/BeautySystemaIcons-v1.0" !default;
+
+$icon-user_icon: "\e900";
+$icon-favorite_icon: "\e901";
+$icon-search_icon: "\e902";
+$icon-shopping_cart_icon: "\e903";
+$icon-Instagram_icon-path1: "\e904";
+$icon-Instagram_icon-path2: "\e905";
+$icon-Phone_icon-path1: "\e906";
+$icon-Phone_icon-path2: "\e907";
+$icon-Letter_icon-path1: "\e908";
+$icon-Letter_icon-path2: "\e909";
+$icon-favorite2_icon-path1: "\e90a";
+$icon-favorite2_icon-path2: "\e90b";
+$icon-zoom_in_icon-path1: "\e90c";
+$icon-zoom_in_icon-path2: "\e90d";
+$icon-Frame_icon: "\e90e";
+$icon-Frame_video_icon: "\e90f";
+$icon-search: "\e986";
+
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fxjokp');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?fxjokp#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?fxjokp') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?fxjokp') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?fxjokp##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user_icon {
+  &:before {
+    content: $icon-user_icon;     
+    color: #4b6d74;
+  }
+}
+.icon-favorite_icon {
+  &:before {
+    content: $icon-favorite_icon;     
+    color: #4b6d74;
+  }
+}
+.icon-search_icon {
+  &:before {
+    content: $icon-search_icon;     
+    color: #4b6d74;
+  }
+}
+.icon-shopping_cart_icon {
+  &:before {
+    content: $icon-shopping_cart_icon;     
+    color: #4b6d74;
+  }
+}
+.icon-Instagram_icon .path1 {
+  &:before {
+    content: $icon-Instagram_icon-path1;  
+    color: rgb(64, 110, 117);
+  }
+}
+.icon-Instagram_icon .path2 {
+  &:before {
+    content: $icon-Instagram_icon-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-Phone_icon .path1 {
+  &:before {
+    content: $icon-Phone_icon-path1;  
+    color: rgb(64, 110, 117);
+  }
+}
+.icon-Phone_icon .path2 {
+  &:before {
+    content: $icon-Phone_icon-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-Letter_icon .path1 {
+  &:before {
+    content: $icon-Letter_icon-path1;  
+    color: rgb(64, 110, 117);
+  }
+}
+.icon-Letter_icon .path2 {
+  &:before {
+    content: $icon-Letter_icon-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-favorite2_icon .path1 {
+  &:before {
+    content: $icon-favorite2_icon-path1;  
+    color: rgb(75, 109, 116);
+  }
+}
+.icon-favorite2_icon .path2 {
+  &:before {
+    content: $icon-favorite2_icon-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-zoom_in_icon .path1 {
+  &:before {
+    content: $icon-zoom_in_icon-path1;  
+    color: rgb(75, 109, 116);
+  }
+}
+.icon-zoom_in_icon .path2 {
+  &:before {
+    content: $icon-zoom_in_icon-path2;  
+    margin-left: -1em;  
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-Frame_icon {
+  &:before {
+    content: $icon-Frame_icon;     
+    color: #fff;
+  }
+}
+.icon-Frame_video_icon {
+  &:before {
+    content: $icon-Frame_video_icon;     
+    color: #fff;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
