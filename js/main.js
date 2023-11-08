@@ -105,82 +105,66 @@ document
 $(function () {
 
   // slider banner
-  var owlBanner = $(".banner-carousel").owlCarousel({
+  $(".banner-carousel").owlCarousel({
     dots: true,
+    nav:true,
     loop: true,
     items: 1,
   });
-  $(".slider-banner .next-slide").click(function () {
-    owlBanner.trigger("next.owl.carousel");
-  });
-  $(".slider-banner .prev-slide").click(function () {
-    owlBanner.trigger("prev.owl.carousel");
-  });
 
   // slider categories
-  var owlCategories = $(".categories-carousel").owlCarousel({
+  $(".categories-carousel").owlCarousel({
     dots: true,
+    nav:true,
     loop: true,
     margin: 30,
     autoWidth: true,
-    items:1,
-  });
-  $(".slider-categories .next-slide").click(function () {
-    console.log('next');
-    owlCategories.trigger("next.owl.carousel");
-  });
-  $(".slider-categories .prev-slide").click(function () {
-    console.log('prev');
-    owlCategories.trigger("prev.owl.carousel");
+    items:4,
   });
 
   //slider popular
-  var owlPopular = $(".popular-carousel").owlCarousel({
+  $(".popular-carousel").owlCarousel({
     dots: true,
+    nav:true,
     loop: true,
     margin: 30,
+    autoWidth: true,
     items:4,
-  });
-  $(".slider-popular .next-slide").click(function () {
-    console.log('next');
-    owlPopular.trigger("next.owl.carousel");
-  });
-  $(".slider-popular .prev-slide").click(function () {
-    console.log('prev');
-    owlPopular.trigger("prev.owl.carousel");
   });
 
   //slider new
-  var owlNew = $(".new-carousel").owlCarousel({
+  $(".new-carousel").owlCarousel({
     dots: true,
+    nav:true,
     loop: true,
     margin: 30,
+    autoWidth: true,
     items:4,
-  });
-  $(".slider-new .next-slide").click(function () {
-    console.log('next');
-    owlNew.trigger("next.owl.carousel");
-  });
-  $(".slider-new .prev-slide").click(function () {
-    console.log('prev');
-    owlNew.trigger("prev.owl.carousel");
   });
 
   // slider advantages
-  var owlAdvantages = $(".advantages-carousel").owlCarousel({
+  $(".advantages-carousel").owlCarousel({
     dots: true,
+    nav:true,
     loop: true,
     autoWidth: true,
     items:1,
   });
-  $(".slider-advantages .next-slide").click(function () {
-    console.log('next');
-    owlAdvantages.trigger("next.owl.carousel");
+
+  // slider insta
+  $(".insta-carousel").owlCarousel({
+    dots: false,
+    nav:false,
+    loop: true,
+    autoWidth: true,
+    items:4,
   });
-  $(".slider-advantages .prev-slide").click(function () {
-    console.log('prev');
-    owlAdvantages.trigger("prev.owl.carousel");
+
+  $(".show-more").on("click", function(e) {
+    e.preventDefault();
+    $(".description-content").toggleClass("showContent");
   });
+
 
 
   // dropdown submenu
