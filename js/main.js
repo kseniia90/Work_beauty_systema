@@ -165,6 +165,25 @@ $(function () {
     $(".description-content").toggleClass("showContent");
   });
 
+  //BEGIN footer accordion
+	$(".accordion__title").on("click", function(e) {
+
+		e.preventDefault();
+		var $this = $(this);
+
+		$this.toggleClass("accordion-active");
+		$this.next().slideToggle();
+		$('.accordion__arrow',this).toggleClass('accordion__rotate');
+
+	});
+	//END
+
+  // hide description content on mobile
+
+  if ($(window).width() < 768) {
+    $('.hide_on_mobile').addClass('hideContent');
+  }
+
 
 
   // dropdown submenu
