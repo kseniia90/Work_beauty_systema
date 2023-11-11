@@ -163,43 +163,6 @@
                         <a href="#"><img src="./img/Phone_icon.svg" alt=""></span></a>
                         <a href="#"><img src="./img/Letter_icon.svg" alt=""></span></a>
                     </div>
-                    <!-- <div class="header__menu mobile-only">
-                        <ul class="header__menu__list mobile-only">
-                            <li class="header__nav-link">
-                                <a class="dropdown-link" href="index.html">Головна</a>
-                            </li>
-                            <li class="header__nav-link">
-                                <a class="dropdown-link" href="about_us_page.html">Про компанію</a>
-                            </li>
-                            <li class="header__nav-link">
-                                <a class="dropdown-link hover-dropdown" href="#">Продукція</a>
-                                <ul class="header__submenu__list">
-                                    <li id="btn_mobile_menu_back" class="back-btn _active">
-                                        <img src="" alt="back"><span>Назад</span>
-                                    </li>
-                                    <li><a href="#">Гидроприводное оборудование</a></li>
-                                    <li><a href="#">Ковш для экскаваторов</a></li>
-                                    <li><a href="#">Гидроприводы HKS</a></li>
-                                    <li class="has-submenu">
-                                        <a href="#">Грейферы HGT</a>
-                                        <ul class="header__second-submenu__list">
-                                            <li><a href="#">Грейфер землеройный</a></li>
-                                            <li><a href="#">Грейфер многочелюстной</a></li>
-                                            <li><a href="#">Грейфер для слома</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="#">HGT</a>
-                                        <ul class="header__second-submenu__list">
-                                            <li><a href="#">Грейфер землеройный</a></li>
-                                            <li><a href="#">Грейфер многочелюстной</a></li>
-                                            <li><a href="#">Грейфер для слома</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div> -->
                 </nav>
             </div>
         </header>
@@ -248,25 +211,117 @@
                         <div class="product-page__content__tab">
                             <!-- Tab links -->
                             <div class="tab">
-                                <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-                                <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-                                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+                                <button class="tablinks active" id="defaultOpen" onclick="openOption(event, 'description')">Опис</button>
+                                <button class="tablinks" onclick="openOption(event, 'characteristics')">Характеристики</button>
+                                <button class="tablinks" onclick="openOption(event, 'reviews')">Відгуки <span class="reviews-count">(1)</span></button>
+                                <button class="tablinks" onclick="openOption(event, 'composition')">Склад</button>
                             </div>
                         
                             <!-- Tab content -->
-                            <div id="London" class="tabcontent">
-                                <h3>London</h3>
-                                <p>London is the capital city of England.</p>
+                            <div id="description" class="tabcontent" style="display: block;">
+                                <p><span class="blue-text ">Acnemy ZITCLEAN</span> – ніжний очисний гель із вмістом поверхнево-активних речовин менш як 10%, що робить його не
+                                    подразнюючим. Zitclean® захищає від прищів, піклуючись про вашу шкіру. Формула підтримується двома основними
+                                    інгредієнтами: <span class="blue-text ">саліциловою кислотою та азелогліцином (азелаїнова кислота + гліцин)</span> , які м’яко відлущують шкіру
+                                    та контролюють надлишок шкірного сала. Коли його використовувати: Двічі на день, вранці та ввечері, щоб очистити
+                                    та підготувати шкіру до наступного продукту.</p>
+                                <h4 class="subtitle16">Основні компоненти:</h4>
+                                <ul>
+                                    <li><span class="blue-text ">Саліцилова кислота</span> – кератолітик, сприяє розщепленню та виведенню сального секрету та вмісту закупорених
+                                        пор. Чинить антисептичну та протизапальну дію.</li>
+                                    <li><span class="blue-text ">Азелаїнова кислота</span>  – кератолітик, має протимікробну дію щодо Propionibacterium acne та Staphylococcus
+                                        epidermidis.</li>
+                                    <li><span class="blue-text ">Гліцирін </span> – амінокислота, стимулює процеси регенерації та самовідновлення пошкоджень.</li>
+                                </ul>
+                                <h4 class="subtitle16">Спосіб застосування:</h4>
+                                <p>Нанесіть невелику кількість засобу на вологу шкіру. М’яко втирайте в шкіру круговими рухами. Змийте великою
+                                    кількістю води і закінчіть холодною водою, щоб закрити пори. Промокніть шкіру рушником.</p>
                             </div>
                         
-                            <div id="Paris" class="tabcontent">
-                                <h3>Paris</h3>
-                                <p>Paris is the capital of France.</p>
+                            <div id="characteristics" class="tabcontent">
+                                <div class="characteristics__container">
+                                    <div class="characteristics__item">
+                                        <span class="characteristics__name">Країна виробник</span>
+                                        <span class="characteristics__value">Іспанія</span>
+                                    </div>
+                                    <div class="characteristics__item">
+                                        <span class="characteristics__name">Бренд</span>
+                                        <span class="characteristics__value">ACNEMY</span>
+                                    </div>
+                                    <div class="characteristics__item">
+                                        <span class="characteristics__name">Об’єм</span>
+                                        <span class="characteristics__value">60мл, 150мл</span>
+                                    </div>
+                                    <div class="characteristics__item">
+                                        <span class="characteristics__name">Тип шкіри</span>
+                                        <span class="characteristics__value">Жирна, комбінована, проблемна</span>
+                                    </div>
+                                    <div class="characteristics__item">
+                                        <span class="characteristics__name">Діючі компоненти</span>
+                                        <span class="characteristics__value">Азелаінова кислота, ВНА (саліцилова) кислота</span>
+                                    </div>
+                                    <div class="characteristics__item">
+                                        <span class="characteristics__name">Призначення</span>
+                                        <span class="characteristics__value">від акне, від запалення, жирність, себорегулювання, закриті комедони, чорні цятки, пігментація, постакне, рельєф, підшкірники</span>
+                                    </div>
+                                </div>
                             </div>
                         
-                            <div id="Tokyo" class="tabcontent">
-                                <h3>Tokyo</h3>
-                                <p>Tokyo is the capital of Japan.</p>
+                            <div id="reviews" class="tabcontent">
+                                <ul class="reviews__list">
+                                    <li class="reviews__list__item review">
+                                        <div class="review__title">
+                                            <img class="review_user_icon" src="./img/user_icon.svg" alt="" width="96" height="96">
+                                            <div class="review__column">
+                                                <div class="review__column__top">
+                                                    <span class="review_time">16.05.2023</span>
+                                                    <div class="review_stars">
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="review_user_name">Viktoriia</p>
+                                            </div>
+                                        </div>
+                                        <div class="review__content">
+                                            <p>Маю комбіновану шкіру, цей гель очищує її чудово. Дуже мʼякий, має нейтральний аромат, після нього не залишається
+                                                стягнутості чи сухості обличчя. Рекомендую!</p>
+                                            <img src="" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="reviews__list__item review">
+                                        <div class="review__title">
+                                            <img class="review_user_icon" src="./img/user_icon.svg" alt="" width="96" height="96">
+                                            <div class="review__column">
+                                                <div class="review__column__top">
+                                                    <span class="review_time">16.05.2023</span>
+                                                    <div class="review_stars">
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star"></div>
+                                                        <div class="review_star light-star"></div>
+                                                    </div>
+                                                </div>
+                                                <p class="review_user_name">Viktoriia</p>
+                                            </div>
+                                        </div>
+                                        <div class="review__content">
+                                            <p>Маю комбіновану шкіру, цей гель очищує її чудово. Дуже мʼякий, має нейтральний аромат, після нього не залишається
+                                                стягнутості чи сухості обличчя. Рекомендую!</p>
+                                            <img src="" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="composition" class="tabcontent">
+                                <p>AQUA (WATER), PROPANEDIOL, GLYCERIN, PEG-6 CAPRYLIC/CAPRIC GLYCERIDES, SPHINGOMONAS FERMENT EXTRACT, SALICYLIC
+                                    ACID, MORINDA CITRIFOLIA CALLUS CULTURE LYSATE, VITIS VINIFERA (GRAPE) FRUIT EXTRACT, ZINGIBER OFFICINALE
+                                    (GINGER) ROOT EXTRACT, BOSWELLIA SERRATA RESIN EXTRACT, POTASSIUM AZELOYL DIGLYCINATE, CERAMIDE NP, XANTHAN GUM,
+                                    CARBOMER, SODIUM COCOYL GLUTAMATE, HYDROGENATED PHOSPHATIDYLCHOLINE, PHOSPHATIDYLCHOLINE, MANNITOL, CHOLESTEROL,
+                                    DECYL GLUCOSIDE, POTASSIUM COCOYL RICE AMINO ACIDS</p>
                             </div>
                         </div>
                     </div>

@@ -367,9 +367,10 @@ document.addEventListener("DOMContentLoaded", setEndValue);
 rangeEnd.addEventListener('input', setEndValue);
 // price range slider END
 
+
 // tab on product-page START
 
-function openCity(evt, cityName) {
+function openOption(evt, optionName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -386,9 +387,10 @@ function openCity(evt, cityName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(optionName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
 // tab on product-page END
 
 

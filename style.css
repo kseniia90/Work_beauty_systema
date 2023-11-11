@@ -448,6 +448,23 @@ h1, h2, h3 {
   }
 }
 
+.subtitle16 {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  line-height: normal;
+  color: #213235;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  .subtitle16 {
+    font-size: 14px;
+  }
+}
+
+.blue-text {
+  color: #4B6D74;
+}
+
 .custom-button {
   color: #4B6D74;
   display: flex;
@@ -2186,14 +2203,13 @@ ol.breadcrumb li .icon-Home-Page {
   gap: 30px;
   font-size: 18px;
   line-height: 142.9%; /* 25.722px */
+  margin-bottom: 100px;
 }
 .product-page__content__left {
   padding: 5px;
-  border: 1px solid red;
+  flex: 0 0 40.17094%; /* 470/1170 */
 }
 .product-page__content__img {
-  width: 470px;
-  height: 470px;
   border-radius: 10px;
   box-shadow: 3px 5px 16px 0px rgba(0, 0, 0, 0.07);
   position: relative;
@@ -2232,8 +2248,7 @@ ol.breadcrumb li .icon-Home-Page {
   letter-spacing: 0.35px;
 }
 .product-page__content__right {
-  border: 1px solid green;
-  flex: 1 0 auto;
+  flex: 0 0 58%; /* 700/1200 */
 }
 .product-page__content__right .product__card__info__reviews {
   justify-content: flex-start;
@@ -2255,6 +2270,181 @@ ol.breadcrumb li .icon-Home-Page {
   align-items: center;
   flex-direction: row;
   gap: 10px;
+}
+.product-page__content__tab {
+  margin-top: 20px;
+  /* Style the buttons that are used to open the tab content */
+  /* Change background color of buttons on hover */
+  /* Create an active/current tablink class */
+  /* Style the tab content */
+}
+.product-page__content__tab .tab {
+  border-top: 1px solid rgba(33, 50, 53, 0.2);
+  border-bottom: 1px solid rgba(33, 50, 53, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  gap: 10px;
+}
+.product-page__content__tab .tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 35px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 142.9%; /* 22.864px */
+  opacity: 0.2;
+  margin: -1px 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+.product-page__content__tab .tab button:hover {
+  opacity: 0.6;
+}
+.product-page__content__tab .tab button.active {
+  border-top: 1px solid #4B6D74;
+  border-bottom: 1px solid #4B6D74;
+  opacity: 1;
+}
+.product-page__content__tab .tabcontent {
+  display: none;
+  padding: 10px 0;
+  border-top: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 142.9%;
+}
+.product-page__content__tab .tabcontent .subtitle16 {
+  margin: 15px 0;
+}
+.product-page__content #description ul li {
+  position: relative;
+  padding-left: 20px;
+}
+.product-page__content #description ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.product-page__content #description ul li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #4B6D74;
+}
+.product-page__content .characteristics__container .characteristics__item {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 142.9%; /* 20.006px */
+  border-bottom: 1px solid rgba(33, 50, 53, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  padding: 10px 15px;
+  gap: 20px;
+}
+.product-page__content .characteristics__container .characteristics__item .characteristics__name {
+  font-size: 16px;
+  font-weight: 400;
+}
+.product-page__content .characteristics__container .characteristics__item .characteristics__value {
+  text-align: right;
+}
+.product-page__content #composition {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 142.9%; /* 22.864px */
+}
+.product-page__content .reviews__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-page__content .reviews__list .reviews__list__item {
+  border-bottom: 1px solid rgba(33, 50, 53, 0.2);
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-page__content .reviews__list .reviews__list__item .review__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 142.9%; /* 20.006px */
+  padding-right: 46px;
+  position: relative;
+}
+.product-page__content .reviews__list .reviews__list__item .review__title::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 46px;
+  background: url(./img/review_quot.svg) center no-repeat;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.product-page__content .reviews__list .reviews__list__item .review__title .review__column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+.product-page__content .reviews__list .reviews__list__item .review__title .review__column .review__column__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.product-page__content .reviews__list .reviews__list__item .review__title .review_stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 7px;
+  margin-bottom: 5px;
+}
+.product-page__content .reviews__list .reviews__list__item .review__title .review_stars .review_star {
+  width: 16px;
+  height: 16px;
+  background: url(./img/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-page__content .reviews__list .reviews__list__item .review__title .review_stars .review_star.light-star {
+  background: url(./img/star_light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .product-page__content .reviews__list .reviews__list__item .review__title .review_stars .review_star {
+    width: 12px;
+    height: 12px;
+  }
+}
+.product-page__content .reviews__list .reviews__list__item .review__title .review_user_name {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .footer {

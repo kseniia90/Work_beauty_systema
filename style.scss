@@ -87,6 +87,17 @@ h1, h2, h3 {
       font-size: 22px;
     }
 }
+
+.subtitle16 {
+    @include font($font-montserrat, 16px, normal, $gray); 
+    font-weight: 600;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+}
+.blue-text {
+    color: $blue;
+}
 .custom-button {
     color: $blue;
     @include flex(flex-start, center, row);
@@ -1760,13 +1771,12 @@ ol.breadcrumb li {
         gap: 30px;
         font-size: 18px;
         line-height: 142.9%; /* 25.722px */
+        margin-bottom: 100px;
         &__left {
             padding: 5px;
-            border: 1px solid red;
+            flex: 0 0 40.17094%; /* 470/1170 */
         }
         &__img {
-            width: 470px;
-            height: 470px;
             border-radius: 10px;
             box-shadow: 3px 5px 16px 0px rgba(0, 0, 0, 0.07);
             position: relative;
@@ -1802,8 +1812,7 @@ ol.breadcrumb li {
             }
         }
         &__right {
-            border: 1px solid green;
-            flex: 1 0 auto;
+            flex: 0 0 58%; /* 700/1200 */
             .product__card__info__reviews {
                 justify-content: flex-start;
                 margin-top: 15px;
@@ -1818,6 +1827,164 @@ ol.breadcrumb li {
             .product__card__info__price {
                 @include flex(flex-start, center, row);
                 gap: 10px;
+            }
+        }
+        &__tab {
+            margin-top: 20px;
+            .tab {
+                // overflow: hidden;
+                border-top: 1px solid rgba(33, 50, 53, 0.20);
+                border-bottom: 1px solid rgba(33, 50, 53, 0.20);
+                @include flex(space-between, stretch, row); 
+                gap: 10px;
+            }
+            
+            /* Style the buttons that are used to open the tab content */
+            .tab button {
+                background-color: inherit;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 10px 35px;
+                transition: 0.3s;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 142.9%; /* 22.864px */
+                opacity: 0.2;
+                margin: -1px 0;
+                border-top: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                white-space: nowrap;
+            }
+            
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                opacity: 0.6;
+            }
+            
+            /* Create an active/current tablink class */
+            .tab button.active {
+                border-top: 1px solid $blue;
+                border-bottom: 1px solid $blue;
+                opacity: 1;
+            }
+            
+            /* Style the tab content */
+            .tabcontent {
+                display: none;
+                padding: 10px 0;
+                border-top: none;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 142.9%;
+                .subtitle16 {
+                    margin: 15px 0;
+                }
+            }
+        }
+        #description {
+            ul li {
+                position: relative;
+                padding-left: 20px;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    left: 5px;
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 50%;
+                    background-color: $blue;
+                }
+            }
+        }
+        .characteristics__container {
+            .characteristics__item {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 142.9%; /* 20.006px */
+                border-bottom: 1px solid rgba(33, 50, 53, 0.10);
+                @include flex(space-between, stretch, row); 
+                padding: 10px 15px;
+                gap: 20px;
+                .characteristics__name {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .characteristics__value {
+                    text-align: right;
+                }
+            }
+        }
+        #composition {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 142.9%; /* 22.864px */
+        }
+        .reviews__list {
+            @include flex(flex-start, flex-start, column); 
+            gap: 20px;
+            .reviews__list__item {
+                border-bottom: 1px solid rgba(33, 50, 53, 0.20);
+                padding-bottom: 10px;
+                @include flex(flex-start, stretch, column); 
+                gap: 10px;
+                .review__title {
+                    @include flex(flex-start, center, row); 
+                    gap: 20px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 142.9%; /* 20.006px */
+                    padding-right: 46px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 46px;
+                        height: 46px;
+                        background: url(./img/review_quot.svg) center no-repeat;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%)
+                    }
+                    .review__column {
+                        @include flex(flex-start, flex-start, column); 
+                            gap: 5px;
+                        .review__column__top {
+                            @include flex(flex-start, center, row); 
+                            gap: 10px;
+                        }
+                    }
+                    .review_stars {
+                        @include flex(center, center, row);
+                        gap: 7px;
+                        margin-bottom: 5px;
+                        .review_star {
+                            width: 16px;
+                            height: 16px;
+                            background: url(./img/star.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            &.light-star {
+                                background: url(./img/star_light.svg);
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                            @media (max-width: $mobile) {
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+                    }
+                    .review_user_name {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
