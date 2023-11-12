@@ -1924,6 +1924,95 @@ ol.breadcrumb li {
             font-weight: 400;
             line-height: 142.9%; /* 22.864px */
         }
+        #reviews {
+            .add-review__stars-block {
+                @include flex(space-between, center, row);
+            }
+            .review_stars {
+                @include flex(center, center, row);
+                gap: 7px;
+                margin-bottom: 5px;
+                .review_star {
+                    width: 16px;
+                    height: 16px;
+                    background: url(./img/star.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    &.light-star {
+                        background: url(./img/star_light.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    &.gray-star {
+                        background: url(./img/Star_gray.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        opacity:0.2 ;
+                        transition: all 0.3s ease;
+                    }
+                    @media (max-width: $mobile) {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+            }
+            .add-review {
+                @include flex(flex-start, stretch, column);
+                gap: 10px;
+                margin-top: 20px;
+                .add-review__title {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 142.9%; /* 28.58px */
+                }
+                .subtitle16 {
+                    margin: 0;
+                }
+                input::placeholder, textarea::placeholder {
+                    opacity: 0.2;
+                    color: $gray;
+                }
+                #user_review_text {
+                    outline: none;
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid rgba(33, 50, 53, 0.20);
+                }
+                .add-review__file {
+                    input {
+                        display: none;
+                    }
+                    label {
+                        @include flex(flex-start, center, row);
+                        gap: 5px;
+                    }
+                }
+                .add-review__row {
+                    @include flex(stretch, center, row);
+                    gap: 20px;
+                    input {
+                        width: 100%;
+                        outline: none;
+                        padding: 10px;
+                        border: none;
+                        border-bottom: 1px solid rgba(33, 50, 53, 0.20);
+                    }
+                }
+                .product__card__info__buy-button {
+                    background-color: $blue;
+                    color: white;
+                }
+            }
+            .add-review__stars-block {
+                .review_stars {
+                    &:hover {
+                        .gray-star {
+                            opacity: 1;
+                        }   
+                    }
+                }
+            }
+        }
         .reviews__list {
             @include flex(flex-start, flex-start, column); 
             gap: 20px;
@@ -1957,27 +2046,6 @@ ol.breadcrumb li {
                         .review__column__top {
                             @include flex(flex-start, center, row); 
                             gap: 10px;
-                        }
-                    }
-                    .review_stars {
-                        @include flex(center, center, row);
-                        gap: 7px;
-                        margin-bottom: 5px;
-                        .review_star {
-                            width: 16px;
-                            height: 16px;
-                            background: url(./img/star.svg);
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            &.light-star {
-                                background: url(./img/star_light.svg);
-                                background-position: center;
-                                background-repeat: no-repeat;
-                            }
-                            @media (max-width: $mobile) {
-                                width: 12px;
-                                height: 12px;
-                            }
                         }
                     }
                     .review_user_name {

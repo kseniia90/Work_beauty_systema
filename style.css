@@ -2363,6 +2363,106 @@ ol.breadcrumb li .icon-Home-Page {
   font-weight: 400;
   line-height: 142.9%; /* 22.864px */
 }
+.product-page__content #reviews .add-review__stars-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.product-page__content #reviews .review_stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 7px;
+  margin-bottom: 5px;
+}
+.product-page__content #reviews .review_stars .review_star {
+  width: 16px;
+  height: 16px;
+  background: url(./img/star.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-page__content #reviews .review_stars .review_star.light-star {
+  background: url(./img/star_light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-page__content #reviews .review_stars .review_star.gray-star {
+  background: url(./img/Star_gray.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .product-page__content #reviews .review_stars .review_star {
+    width: 12px;
+    height: 12px;
+  }
+}
+.product-page__content #reviews .add-review {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.product-page__content #reviews .add-review .add-review__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 142.9%; /* 28.58px */
+}
+.product-page__content #reviews .add-review .subtitle16 {
+  margin: 0;
+}
+.product-page__content #reviews .add-review input::-moz-placeholder, .product-page__content #reviews .add-review textarea::-moz-placeholder {
+  opacity: 0.2;
+  color: #213235;
+}
+.product-page__content #reviews .add-review input::placeholder, .product-page__content #reviews .add-review textarea::placeholder {
+  opacity: 0.2;
+  color: #213235;
+}
+.product-page__content #reviews .add-review #user_review_text {
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(33, 50, 53, 0.2);
+}
+.product-page__content #reviews .add-review .add-review__file input {
+  display: none;
+}
+.product-page__content #reviews .add-review .add-review__file label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.product-page__content #reviews .add-review .add-review__row {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.product-page__content #reviews .add-review .add-review__row input {
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(33, 50, 53, 0.2);
+}
+.product-page__content #reviews .add-review .product__card__info__buy-button {
+  background-color: #4B6D74;
+  color: white;
+}
+.product-page__content #reviews .add-review__stars-block .review_stars:hover .gray-star {
+  opacity: 1;
+}
 .product-page__content .reviews__list {
   display: flex;
   justify-content: flex-start;
@@ -2415,32 +2515,6 @@ ol.breadcrumb li .icon-Home-Page {
   align-items: center;
   flex-direction: row;
   gap: 10px;
-}
-.product-page__content .reviews__list .reviews__list__item .review__title .review_stars {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 7px;
-  margin-bottom: 5px;
-}
-.product-page__content .reviews__list .reviews__list__item .review__title .review_stars .review_star {
-  width: 16px;
-  height: 16px;
-  background: url(./img/star.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.product-page__content .reviews__list .reviews__list__item .review__title .review_stars .review_star.light-star {
-  background: url(./img/star_light.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-@media (max-width: 768px) {
-  .product-page__content .reviews__list .reviews__list__item .review__title .review_stars .review_star {
-    width: 12px;
-    height: 12px;
-  }
 }
 .product-page__content .reviews__list .reviews__list__item .review__title .review_user_name {
   font-size: 20px;
