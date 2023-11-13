@@ -602,76 +602,76 @@ ol.breadcrumb li {
         transform: rotate(45deg) translate(0px, 50%);
     }
 }
-.menu {
-    &__body {
-        width: 500px;
-        position: fixed;
-        left: -200%;
-        top: 0;
-        background: #F6F6F6;
-        transition: left 0.3s ease;
-        height: 100vh; 
-        overflow-y: scroll;
-        &::-webkit-scrollbar { 
-            width: 8px;
-        }        
-        &::-webkit-scrollbar-thumb {
-            background: #C8C8C8; 
-            border-radius: 4px;
-        } 
-        &._active {
-           left: 0;
-        }
-        @media (max-width: $tablet) {
-            width: 100%;
-        }
-    }
-    &__title {
-        @include font($font-montserrat, 20px, 24px, #000000); 
-        text-transform: uppercase;
-        padding: 20px 15px 25px;
-    }
-    &__list {
-        &-item {
-            @include font($font-montserrat, 13px, 15px, #000000); 
-            > a {
-                display: inline-block;
-                margin-bottom: 12px;
-                padding-left: 15px; 
-            }
-        }
-        .menu-item {
-            padding: 4px 5px 4px 15px; 
-            &._active {
-                @include font($font-montserrat, 13px, 15px, #FFFFFF); 
-                background-color: red;
-                display: inline-block;
-                width: 100%; 
-            }
-            &:hover {
-                @include font($font-montserrat, 13px, 15px, #FFFFFF);  
-                background-color: red;
-                display: inline-block;
-                width: 100%; 
-            }
-        }
-    }
-}
-.menu__body .menu__list >.menu__sublist {
-    max-width: none;
-    margin-left: 0px;
-}
-.menu__body .menu__list >.menu__sublist >li {
-    color: #FFFFFF !important;
-    font-family: $font-montserrat;
-    background-color: red;
-    display: inline-block;
-    width: 100%; 
-    padding: 5px 20px;
-    >a:hover {
-        color: #FFFFFF !important;
-    }
-}
+// .menu {
+//     &__body {
+//         width: 500px;
+//         position: fixed;
+//         left: -200%;
+//         top: 0;
+//         background: #F6F6F6;
+//         transition: left 0.3s ease;
+//         height: 100vh; 
+//         overflow-y: scroll;
+//         &::-webkit-scrollbar { 
+//             width: 8px;
+//         }        
+//         &::-webkit-scrollbar-thumb {
+//             background: #C8C8C8; 
+//             border-radius: 4px;
+//         } 
+//         &._active {
+//            left: 0;
+//         }
+//         @media (max-width: $tablet) {
+//             width: 100%;
+//         }
+//     }
+//     &__title {
+//         @include font($font-montserrat, 20px, 24px, #000000); 
+//         text-transform: uppercase;
+//         padding: 20px 15px 25px;
+//     }
+//     &__list {
+//         &-item {
+//             @include font($font-montserrat, 13px, 15px, #000000); 
+//             > a {
+//                 display: inline-block;
+//                 margin-bottom: 12px;
+//                 padding-left: 15px; 
+//             }
+//         }
+//         .menu-item {
+//             padding: 4px 5px 4px 15px; 
+//             &._active {
+//                 @include font($font-montserrat, 13px, 15px, #FFFFFF); 
+//                 background-color: red;
+//                 display: inline-block;
+//                 width: 100%; 
+//             }
+//             &:hover {
+//                 @include font($font-montserrat, 13px, 15px, #FFFFFF);  
+//                 background-color: red;
+//                 display: inline-block;
+//                 width: 100%; 
+//             }
+//         }
+//     }
+// }
+// .menu__body .menu__list >.menu__sublist {
+//     max-width: none;
+//     margin-left: 0px;
+// }
+// .menu__body .menu__list >.menu__sublist >li {
+//     color: #FFFFFF !important;
+//     font-family: $font-montserrat;
+//     background-color: red;
+//     display: inline-block;
+//     width: 100%; 
+//     padding: 5px 20px;
+//     >a:hover {
+//         color: #FFFFFF !important;
+//     }
+// }
 
 .burger-menu { 
     position: relative;
@@ -811,8 +811,7 @@ ol.breadcrumb li {
     @include flex(space-between, center, row);
     .owl-prev:hover, .owl-next:hover {
         span {
-            background-color: yellow;
-            color: yellow;
+            opacity: 0.8;
         }
     }
     .owl-prev span {
@@ -822,7 +821,7 @@ ol.breadcrumb li {
         border: none;
         width: 55px;
         height: 55px;
-        color: $blue;
+        color: transparent;
         border-radius: 50%;
         transition: all 0.3s ease;
         @media (max-width: $mobile) {
@@ -838,7 +837,7 @@ ol.breadcrumb li {
         border: none;
         width: 55px;
         height: 55px;
-        color: $blue;
+        color: transparent;
         border-radius: 50%;
         transition: all 0.3s ease;
         @media (max-width: $mobile) {
@@ -1125,6 +1124,11 @@ ol.breadcrumb li {
             font-style: normal;
             font-weight: 500;
             line-height: normal;
+            transition: all 0.3s ease;
+            &:hover {
+                color: white;
+                background-color: $blue;
+            }
             @media (max-width: $mobile) {
                 padding: 10px;
                 gap: 5px;
@@ -1740,7 +1744,7 @@ ol.breadcrumb li {
                     @include flex(center, center, row);
                     font-size: 17px;
                     gap: 10px;
-                    img {
+                    .icon-right-arrow {
                         transform: rotate(90deg);
                     }
                     &:hover {
@@ -1846,11 +1850,16 @@ ol.breadcrumb li {
                 justify-content: flex-start;
                 gap: 15px;
                 margin: 20px 0;
-                @media (max-width: $mobile) {
-                    .product__card__info__variants-option {
+                .product__card__info__variants-option {
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: white;
+                        background-color: $blue;
+                    }
+                    @media (max-width: $mobile) {
                         font-size: 18px;
                     }
-                }
+                } 
             }
         }
         &__price-block {
@@ -1899,7 +1908,8 @@ ol.breadcrumb li {
             
             /* Change background color of buttons on hover */
             .tab button:hover {
-                opacity: 0.6;
+                color: $blue;
+                opacity: 1;
             }
             
             /* Create an active/current tablink class */

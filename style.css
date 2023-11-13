@@ -315,6 +315,10 @@ ul {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-right-arrow::before {
+  content: "\e905";
+}
+
 .icon-Home-Page:before {
   content: "\e904";
 }
@@ -960,89 +964,6 @@ ol.breadcrumb li .icon-Home-Page {
   transform: rotate(45deg) translate(0px, 50%);
 }
 
-.menu__body {
-  width: 500px;
-  position: fixed;
-  left: -200%;
-  top: 0;
-  background: #F6F6F6;
-  transition: left 0.3s ease;
-  height: 100vh;
-  overflow-y: scroll;
-}
-.menu__body::-webkit-scrollbar {
-  width: 8px;
-}
-.menu__body::-webkit-scrollbar-thumb {
-  background: #C8C8C8;
-  border-radius: 4px;
-}
-.menu__body._active {
-  left: 0;
-}
-@media (max-width: 992px) {
-  .menu__body {
-    width: 100%;
-  }
-}
-.menu__title {
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
-  line-height: 24px;
-  color: #000000;
-  text-transform: uppercase;
-  padding: 20px 15px 25px;
-}
-.menu__list-item {
-  font-size: 13px;
-  font-family: "Montserrat", sans-serif;
-  line-height: 15px;
-  color: #000000;
-}
-.menu__list-item > a {
-  display: inline-block;
-  margin-bottom: 12px;
-  padding-left: 15px;
-}
-.menu__list .menu-item {
-  padding: 4px 5px 4px 15px;
-}
-.menu__list .menu-item._active {
-  font-size: 13px;
-  font-family: "Montserrat", sans-serif;
-  line-height: 15px;
-  color: #FFFFFF;
-  background-color: red;
-  display: inline-block;
-  width: 100%;
-}
-.menu__list .menu-item:hover {
-  font-size: 13px;
-  font-family: "Montserrat", sans-serif;
-  line-height: 15px;
-  color: #FFFFFF;
-  background-color: red;
-  display: inline-block;
-  width: 100%;
-}
-
-.menu__body .menu__list > .menu__sublist {
-  max-width: none;
-  margin-left: 0px;
-}
-
-.menu__body .menu__list > .menu__sublist > li {
-  color: #FFFFFF !important;
-  font-family: "Montserrat", sans-serif;
-  background-color: red;
-  display: inline-block;
-  width: 100%;
-  padding: 5px 20px;
-}
-.menu__body .menu__list > .menu__sublist > li > a:hover {
-  color: #FFFFFF !important;
-}
-
 .burger-menu {
   position: relative;
   z-index: 100;
@@ -1190,8 +1111,7 @@ ol.breadcrumb li .icon-Home-Page {
   flex-direction: row;
 }
 .owl-nav .owl-prev:hover span, .owl-nav .owl-next:hover span {
-  background-color: yellow;
-  color: yellow;
+  opacity: 0.8;
 }
 .owl-nav .owl-prev span {
   display: inline-block;
@@ -1200,7 +1120,7 @@ ol.breadcrumb li .icon-Home-Page {
   border: none;
   width: 55px;
   height: 55px;
-  color: #4B6D74;
+  color: transparent;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
@@ -1218,7 +1138,7 @@ ol.breadcrumb li .icon-Home-Page {
   border: none;
   width: 55px;
   height: 55px;
-  color: #4B6D74;
+  color: transparent;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
@@ -1542,6 +1462,11 @@ ol.breadcrumb li .icon-Home-Page {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  transition: all 0.3s ease;
+}
+.product__card__info__buy-button:hover {
+  color: white;
+  background-color: #4B6D74;
 }
 @media (max-width: 768px) {
   .product__card__info__buy-button {
@@ -2172,7 +2097,7 @@ ol.breadcrumb li .icon-Home-Page {
   font-size: 17px;
   gap: 10px;
 }
-.categories__content__right .page_navigation .page_navigation__more img {
+.categories__content__right .page_navigation .page_navigation__more .icon-right-arrow {
   transform: rotate(90deg);
 }
 .categories__content__right .page_navigation .page_navigation__more:hover {
@@ -2296,6 +2221,13 @@ ol.breadcrumb li .icon-Home-Page {
   gap: 15px;
   margin: 20px 0;
 }
+.product-page__content__right .product__card__info__variants .product__card__info__variants-option {
+  transition: all 0.3s ease;
+}
+.product-page__content__right .product__card__info__variants .product__card__info__variants-option:hover {
+  color: white;
+  background-color: #4B6D74;
+}
 @media (max-width: 768px) {
   .product-page__content__right .product__card__info__variants .product__card__info__variants-option {
     font-size: 18px;
@@ -2360,7 +2292,8 @@ ol.breadcrumb li .icon-Home-Page {
   white-space: nowrap;
 }
 .product-page__content__tab .tab button:hover {
-  opacity: 0.6;
+  color: #4B6D74;
+  opacity: 1;
 }
 .product-page__content__tab .tab button.active {
   border-top: 1px solid #4B6D74;

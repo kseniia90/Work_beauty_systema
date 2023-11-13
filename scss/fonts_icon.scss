@@ -36,6 +36,9 @@ $icon-search: "\e986";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-right-arrow::before {
+  content: "\e905";
+}
 .icon-Home-Page {
   &:before {
     content: $icon-Home-Page; 

@@ -37,7 +37,7 @@ function dropDownFunc(dropDown) {
           this.parentElement.classList.add("dropdown-open");
           this.nextElementSibling.classList.add("dropdown-active");
           this.querySelector(".arrow_down").classList.add("rotate");
-        }
+        } 
       }
       
     }
@@ -81,11 +81,11 @@ window.addEventListener("click", function (e) {
 function closeDropdown() {
   // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
   document
-    .querySelectorAll(".header__menu__list")
-    .forEach(function (container) {
-      container.classList.remove("dropdown-open");
-      
-    });
+  .querySelectorAll(".header__nav-link")
+  .forEach(function (container) {
+    container.classList.remove("dropdown-open");
+  
+  });
 
   document.querySelectorAll(".header__submenu__list").forEach(function (menu) {
     menu.classList.remove("dropdown-active");
@@ -98,8 +98,8 @@ function closeDropdown() {
       
     });
 
-  document.querySelector(".header__nav").style.paddingBottom = null;
-  document.querySelector(".header__nav").style.marginBottom = null;
+  // document.querySelector(".header__nav").style.paddingBottom = null;
+  // document.querySelector(".header__nav").style.marginBottom = null;
 }
 
 // close the dropdown on mouse out from the dropdown list
@@ -184,7 +184,7 @@ $(function () {
 
   //BEGIN footer accordion
 
-	$(".footer-main__side center .accordion__title").on("click", function(e) {
+	$(".footer-main__side.center .accordion__title").on("click", function(e) {
 
 		e.preventDefault();
 		var $this = $(this);
@@ -273,121 +273,125 @@ elProperties.forEach((item)=>{
 
  // price range slider START
 
- function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
-  const [from, to] = getParsed(fromInput, toInput);
-  fillSlider(fromInput, toInput, '#C6C6C6', '#4B6D74', controlSlider);
-  if (from > to) {
-      fromSlider.value = to;
-      fromInput.value = to;
-  } else {
-      fromSlider.value = from;
+ if(!!document.querySelector(".range_container")) {
+  function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#4B6D74', controlSlider);
+    if (from > to) {
+        fromSlider.value = to;
+        fromInput.value = to;
+    } else {
+        fromSlider.value = from;
+    }
   }
-}
+    
+  function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+    const [from, to] = getParsed(fromInput, toInput);
+    fillSlider(fromInput, toInput, '#C6C6C6', '#4B6D74', controlSlider);
+    setToggleAccessible(toInput);
+    if (from <= to) {
+        toSlider.value = to;
+        toInput.value = to;
+    } else {
+        toInput.value = from;
+    }
+  }
   
-function controlToInput(toSlider, fromInput, toInput, controlSlider) {
-  const [from, to] = getParsed(fromInput, toInput);
-  fillSlider(fromInput, toInput, '#C6C6C6', '#4B6D74', controlSlider);
-  setToggleAccessible(toInput);
-  if (from <= to) {
-      toSlider.value = to;
-      toInput.value = to;
+  function controlFromSlider(fromSlider, toSlider, fromInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#4B6D74', toSlider);
+  if (from > to) {
+    fromSlider.value = to;
+    fromInput.value = to;
   } else {
-      toInput.value = from;
+    fromInput.value = from;
   }
-}
+  }
+  
+  function controlToSlider(fromSlider, toSlider, toInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#4B6D74', toSlider);
+  setToggleAccessible(toSlider);
+  if (from <= to) {
+    toSlider.value = to;
+    toInput.value = to;
+  } else {
+    toInput.value = from;
+    toSlider.value = from;
+  }
+  }
+  
+  function getParsed(currentFrom, currentTo) {
+  const from = parseInt(currentFrom.value, 10);
+  const to = parseInt(currentTo.value, 10);
+  return [from, to];
+  }
+  
+  function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+    const rangeDistance = to.max-to.min;
+    const fromPosition = from.value - to.min;
+    const toPosition = to.value - to.min;
+    controlSlider.style.background = `linear-gradient(
+      to right,
+      ${sliderColor} 0%,
+      ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+      ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+      ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+      ${sliderColor} 100%)`;
+  }
+  
+  function setToggleAccessible(currentTarget) {
+  const toSlider = document.querySelector('#toSlider');
+  if (Number(currentTarget.value) <= 0 ) {
+    toSlider.style.zIndex = 2;
+  } else {
+    toSlider.style.zIndex = 0;
+  }
+  }
+  
+  const fromSlider = document.querySelector('#fromSlider');
+  const toSlider = document.querySelector('#toSlider');
+  const fromInput = document.querySelector('#fromInput');
+  const toInput = document.querySelector('#toInput');
+  fillSlider(fromSlider, toSlider, '#C6C6C6', '#4B6D74', toSlider);
+  setToggleAccessible(toSlider);
+  
+  fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+  toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+  fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+  toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+  
+  // value of start filter price
+  const
+    rangeStart = document.getElementById('fromSlider'),
+    rangeStartV = document.getElementById('fromInput'),
+    setStartValue = ()=>{
+      const
+        newValue = Number( (rangeStart.value - rangeStart.min) * 100 / (rangeStart.max - rangeStart.min) ),
+        newPosition = 10 - (newValue * 0.2);
+      rangeStartV.innerHTML = `<span>₴${rangeStart.value}</span>`;
+      rangeStartV.style.left = `calc(${newValue}% - (5px))`;
+    };
+  document.addEventListener("DOMContentLoaded", setStartValue);
+  rangeStart.addEventListener('input', setStartValue);
+  
+  // value of start filter price
+  const
+    rangeEnd = document.getElementById('toSlider'),
+    rangeEndV = document.getElementById('toInput'),
+    setEndValue = ()=>{
+      const
+        newValue = Number( (rangeEnd.value - rangeEnd.min) * 100 / (rangeEnd.max - rangeEnd.min) ),
+        newPosition = 10 - (newValue * 0.2);
+      rangeEndV.innerHTML = `<span>₴${rangeEnd.value}</span>`;
+      rangeEndV.style.left = `calc(${newValue}% - (10px))`;
+    };
+  document.addEventListener("DOMContentLoaded", setEndValue);
+  rangeEnd.addEventListener('input', setEndValue);
+ } 
 
-function controlFromSlider(fromSlider, toSlider, fromInput) {
-const [from, to] = getParsed(fromSlider, toSlider);
-fillSlider(fromSlider, toSlider, '#C6C6C6', '#4B6D74', toSlider);
-if (from > to) {
-  fromSlider.value = to;
-  fromInput.value = to;
-} else {
-  fromInput.value = from;
-}
-}
 
-function controlToSlider(fromSlider, toSlider, toInput) {
-const [from, to] = getParsed(fromSlider, toSlider);
-fillSlider(fromSlider, toSlider, '#C6C6C6', '#4B6D74', toSlider);
-setToggleAccessible(toSlider);
-if (from <= to) {
-  toSlider.value = to;
-  toInput.value = to;
-} else {
-  toInput.value = from;
-  toSlider.value = from;
-}
-}
-
-function getParsed(currentFrom, currentTo) {
-const from = parseInt(currentFrom.value, 10);
-const to = parseInt(currentTo.value, 10);
-return [from, to];
-}
-
-function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
-  const rangeDistance = to.max-to.min;
-  const fromPosition = from.value - to.min;
-  const toPosition = to.value - to.min;
-  controlSlider.style.background = `linear-gradient(
-    to right,
-    ${sliderColor} 0%,
-    ${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
-    ${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
-    ${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
-    ${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
-    ${sliderColor} 100%)`;
-}
-
-function setToggleAccessible(currentTarget) {
-const toSlider = document.querySelector('#toSlider');
-if (Number(currentTarget.value) <= 0 ) {
-  toSlider.style.zIndex = 2;
-} else {
-  toSlider.style.zIndex = 0;
-}
-}
-
-const fromSlider = document.querySelector('#fromSlider');
-const toSlider = document.querySelector('#toSlider');
-const fromInput = document.querySelector('#fromInput');
-const toInput = document.querySelector('#toInput');
-fillSlider(fromSlider, toSlider, '#C6C6C6', '#4B6D74', toSlider);
-setToggleAccessible(toSlider);
-
-fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
-toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
-toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
-
-// value of start filter price
-const
-  rangeStart = document.getElementById('fromSlider'),
-  rangeStartV = document.getElementById('fromInput'),
-  setStartValue = ()=>{
-    const
-      newValue = Number( (rangeStart.value - rangeStart.min) * 100 / (rangeStart.max - rangeStart.min) ),
-      newPosition = 10 - (newValue * 0.2);
-    rangeStartV.innerHTML = `<span>₴${rangeStart.value}</span>`;
-    rangeStartV.style.left = `calc(${newValue}% - (5px))`;
-  };
-document.addEventListener("DOMContentLoaded", setStartValue);
-rangeStart.addEventListener('input', setStartValue);
-
-// value of start filter price
-const
-  rangeEnd = document.getElementById('toSlider'),
-  rangeEndV = document.getElementById('toInput'),
-  setEndValue = ()=>{
-    const
-      newValue = Number( (rangeEnd.value - rangeEnd.min) * 100 / (rangeEnd.max - rangeEnd.min) ),
-      newPosition = 10 - (newValue * 0.2);
-    rangeEndV.innerHTML = `<span>₴${rangeEnd.value}</span>`;
-    rangeEndV.style.left = `calc(${newValue}% - (10px))`;
-  };
-document.addEventListener("DOMContentLoaded", setEndValue);
-rangeEnd.addEventListener('input', setEndValue);
 // price range slider END
 
 
