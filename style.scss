@@ -121,9 +121,11 @@ h1, h2, h3 {
 .breadcrumb {
     margin-top: 40px;
     margin-bottom: 40px;
+    overflow-x: auto;
+    padding-bottom: 5px;
     @include flex(flex-start, center, row);
     @media (max-width: $tablet) {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
 }
 ol.breadcrumb li {
@@ -131,6 +133,7 @@ ol.breadcrumb li {
     display: inline;
     font-size: 13px;
     opacity: 0.2;
+    white-space: nowrap;
     &.active {
         opacity: 1;
     }
@@ -1772,9 +1775,20 @@ ol.breadcrumb li {
         font-size: 18px;
         line-height: 142.9%; /* 25.722px */
         margin-bottom: 100px;
+        width: 100%;
+        @media (max-width: 1150px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
         &__left {
             padding: 5px;
             flex: 0 0 40.17094%; /* 470/1170 */
+            @media (max-width: $mobile) {
+                flex: 0 0 100%;
+            }
         }
         &__img {
             border-radius: 10px;
@@ -1804,26 +1818,49 @@ ol.breadcrumb li {
             line-height: 142.9%; /* 50.015px */
             margin-bottom: 15px;
             @include flex(space-between, center, row); 
+            @media (max-width: $mobile) {
+                font-size: 25px;
+            }
             .product-status {
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 145.4%; /* 20.356px */
                 letter-spacing: 0.35px;
+                @media (max-width: $mobile) {
+                    font-size: 12px;
+                    letter-spacing: 0.3px;
+                }
             }
         }
         &__right {
             flex: 0 0 58%; /* 700/1200 */
+            @media (max-width: 1150px) {
+                flex: 0 0 100%;
+                padding: 0 15px;
+             }
             .product__card__info__reviews {
                 justify-content: flex-start;
                 margin-top: 15px;
             }
             .product__card__info__variants {
                 justify-content: flex-start;
+                gap: 15px;
                 margin: 20px 0;
+                @media (max-width: $mobile) {
+                    .product__card__info__variants-option {
+                        font-size: 18px;
+                    }
+                }
             }
         }
         &__price-block {
             @include flex(space-between, center, row); 
+            gap: 10px;
+            @media (max-width: $mobile) {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
             .product__card__info__price {
                 @include flex(flex-start, center, row);
                 gap: 10px;
@@ -1831,6 +1868,9 @@ ol.breadcrumb li {
         }
         &__tab {
             margin-top: 20px;
+            @media (max-width: $mobile) {
+               display: none;
+            }
             .tab {
                 // overflow: hidden;
                 border-top: 1px solid rgba(33, 50, 53, 0.20);
@@ -1877,12 +1917,12 @@ ol.breadcrumb li {
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 142.9%;
-                .subtitle16 {
-                    margin: 15px 0;
-                }
             }
         }
-        #description {
+        .subtitle16 {
+            margin: 15px 0;
+        }
+        .description {
             ul li {
                 position: relative;
                 padding-left: 20px;
@@ -1910,23 +1950,45 @@ ol.breadcrumb li {
                 @include flex(space-between, stretch, row); 
                 padding: 10px 15px;
                 gap: 20px;
+                @media (max-width: $mobile) {
+                    font-size: 12px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 5px;
+                }
                 .characteristics__name {
                     font-size: 16px;
                     font-weight: 400;
+                    @media (max-width: $mobile) {
+                        font-size: 14px;
+                    }
                 }
                 .characteristics__value {
                     text-align: right;
+                    @media (max-width: $mobile) {
+                        text-align: left;
+                    }
                 }
             }
         }
-        #composition {
+        .composition {
             font-size: 16px;
             font-weight: 400;
             line-height: 142.9%; /* 22.864px */
+            @media (max-width: $mobile) {
+                font-size: 14px;
+            }
         }
-        #reviews {
+        .reviews {
             .add-review__stars-block {
                 @include flex(space-between, center, row);
+                gap: 10px;
+                @media (max-width: 360px) {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
             }
             .review_stars {
                 @include flex(center, center, row);
@@ -1964,6 +2026,9 @@ ol.breadcrumb li {
                     font-size: 20px;
                     font-weight: 600;
                     line-height: 142.9%; /* 28.58px */
+                    @media (max-width: $mobile) {
+                        font-size: 18px;
+                    }
                 }
                 .subtitle16 {
                     margin: 0;
@@ -1985,11 +2050,20 @@ ol.breadcrumb li {
                     label {
                         @include flex(flex-start, center, row);
                         gap: 5px;
+                        @media (max-width: $mobile) {
+                            font-size: 12px;
+                        }
                     }
                 }
                 .add-review__row {
                     @include flex(stretch, center, row);
                     gap: 20px;
+                    @media (max-width: $mobile) {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        margin-bottom: 10px;
+                    }
                     input {
                         width: 100%;
                         outline: none;
@@ -2021,6 +2095,9 @@ ol.breadcrumb li {
                 padding-bottom: 10px;
                 @include flex(flex-start, stretch, column); 
                 gap: 10px;
+                @media (max-width: $mobile) {
+                    border-bottom: none;
+                }
                 .review__title {
                     @include flex(flex-start, center, row); 
                     gap: 20px;
@@ -2029,6 +2106,13 @@ ol.breadcrumb li {
                     line-height: 142.9%; /* 20.006px */
                     padding-right: 46px;
                     position: relative;
+                    @media (max-width: $mobile) {
+                        gap: 10px;
+                        img {
+                            width: 61px;
+                            height: 61px;
+                        }
+                    }
                     &::after {
                         content: "";
                         display: block;
@@ -2055,8 +2139,47 @@ ol.breadcrumb li {
                 }
             }
         }
+        .product-page__accordion {
+            gap: 10px;
+            display: none;
+            margin-top: 20px;
+            @media (max-width: $mobile) {
+                @include flex(stretch, stretch, column);
+            }
+            .accordion__item {
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba(33, 50, 53, 0.10);
+                }
+                
+                &.border {
+                    border-bottom: 1px solid var(--accent, #4B6D74);
+                    .accordion__title {
+                        border-bottom: 1px solid var(--accent, #4B6D74);
+                    }
+                }
+            }
+            .accordion__title {
+                @include flex(space-between, center, row);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 142.9%; /* 22.864px */
+                padding: 10px 15px;
+            }
+            .accordion__arrow {
+                width: 12px;
+                height: 12px;
+                background: url(./img/filters_plus.svg) center no-repeat;
+                &.minus {
+                    background: url(./img/filters_minus.svg) center no-repeat;  
+                }
+            }
+            .accordion__content {
+                display: none;
+                padding: 10px 0;
+            }
+        }
     }
-
 }
 .footer {
     flex: 0 0 auto;
