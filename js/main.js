@@ -132,19 +132,19 @@ $(function () {
     nav:true,
     loop: true,
     margin: 30,
+    center: true,
     autoWidth: true,
-    items: 4,
-    slideBy: 1,
-    onInitialized: function() {
-      setTimeout(fadeSlides, 100)
+    onInitialized: function(e) {
+      setTimeout(fadeSlides, 100, e)
     },
     onTranslated: fadeSlides,
+    onResized: fadeSlides,
   });
 
   function fadeSlides(e) {
-    $(".categories-carousel .owl-item").removeClass("opacity");
-    $(".categories-carousel .owl-item.active").first().addClass("opacity");
-    $(".categories-carousel .owl-item.active").last().addClass("opacity");
+    $(e.target).find(".owl-item").removeClass("opacity");
+    $(e.target).find(".owl-item.active").first().prev().addClass("opacity");
+    $(e.target).find(".owl-item.active").last().addClass("opacity");
   }
   
   //slider popular
@@ -153,9 +153,16 @@ $(function () {
     nav:true,
     loop: true,
     margin: 30,
+    center: true,
     autoWidth: true,
-    items:4,
-  });
+    onInitialized: function(e) {
+      setTimeout(fadeSlides, 100, e)
+    },
+    onTranslated: fadeSlides,
+    onResized: fadeSlides,
+   });
+
+  
 
   //slider new
   $(".new-carousel").owlCarousel({
@@ -163,8 +170,13 @@ $(function () {
     nav:true,
     loop: true,
     margin: 30,
+    center: true,
     autoWidth: true,
-    items:4,
+    onInitialized: function(e) {
+      setTimeout(fadeSlides, 100, e)
+    },
+    onTranslated: fadeSlides,
+    onResized: fadeSlides,
   });
 
   // slider advantages
