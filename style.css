@@ -754,32 +754,15 @@ ol.breadcrumb li .icon-Home-Page {
   cursor: pointer;
   width: 100%;
 }
-.header__nav__list .header__nav-link > a {
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
-  padding: 10px 0;
-}
-@media (max-width: 1100px) {
-  .header__nav__list .header__nav-link > a {
-    padding: 5px 0;
-  }
-}
 .header__nav__list .header__nav-link a {
   display: block;
   height: 100%;
   width: 100%;
 }
-.header__nav__list .header__nav-link.dropdown-open > a {
-  height: auto;
-  color: #4B6D74;
-}
-@media (min-width: 769px) {
-  .header__nav__list .header__nav-link:hover > a, .header__nav__list .header__nav-link:active > a, .header__nav__list .header__nav-link:focus > a {
-    color: #4B6D74;
-    border-bottom: 1px solid #4B6D74;
-  }
-}
-.header__nav__list .header__nav-link .dropdown-link {
+.header__nav__list .header__nav-link > a {
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+  padding: 10px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -787,9 +770,20 @@ ol.breadcrumb li .icon-Home-Page {
   gap: 5px;
 }
 @media (max-width: 1100px) {
-  .header__nav__list .header__nav-link .dropdown-link {
+  .header__nav__list .header__nav-link > a {
+    padding: 5px 0;
     justify-content: flex-end;
     font-size: 13px;
+  }
+}
+.header__nav__list .header__nav-link.dropdown-open > a {
+  height: auto;
+  color: #4B6D74;
+}
+@media (min-width: 769px) {
+  .header__nav__list .header__nav-link > a:hover, .header__nav__list .header__nav-link > a:active, .header__nav__list .header__nav-link > a:focus {
+    color: #4B6D74;
+    border-bottom: 1px solid #4B6D74;
   }
 }
 .header__nav__list .header__nav-link .arrow_down {
@@ -890,27 +884,6 @@ ol.breadcrumb li .icon-Home-Page {
     transform: translate(0, 0);
     padding: 0 0 10px 0;
   }
-}
-.header .has-submenu {
-  position: relative;
-}
-.header .has-submenu::before {
-  content: "";
-  position: absolute;
-  top: 29px;
-  left: 0;
-  width: 5px;
-  height: 8px;
-  background-image: url(./img/menu_arrow.svg);
-  background-position: 0 center;
-  background-repeat: no-repeat;
-}
-.header .header__second-submenu__list {
-  font-family: "Montserrat", sans-serif;
-  display: none;
-}
-.header .header__second-submenu__list.open {
-  color: #213235;
 }
 
 .dropdown-open .dropdown-active {

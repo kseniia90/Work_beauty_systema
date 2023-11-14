@@ -342,37 +342,34 @@ ol.breadcrumb li {
                 position: relative;
                 cursor: pointer;
                 width: 100%;
-                >a {
-                    border-bottom: 1px solid transparent;
-                    transition: all 0.3s ease;
-                    padding: 10px 0;
-                    @media (max-width:$menuWidth) {
-                        padding: 5px 0;
-                    }
-                }
                 a {
                     display: block;
                     height: 100%;
                     width: 100%;
                 }
+                >a {
+                    border-bottom: 1px solid transparent;
+                    transition: all 0.3s ease;
+                    padding: 10px 0;
+                    @include flex(flex-start, center, row);
+                    gap: 5px;
+                    @media (max-width:$menuWidth) {
+                        padding: 5px 0;
+                        justify-content: flex-end;
+                        font-size: 13px;
+                    }
+                }
                 &.dropdown-open >a {
                     height: auto;
                     color: $blue;
                 }
-                @media (min-width: 769px) {
-                    &:hover, &:active, &:focus {
-                        >a {
+                @media (min-width: 769px) {                 
+                    >a {
+                        &:hover, &:active, &:focus {
                             color: $blue;
                             border-bottom: 1px solid $blue;
                         }
-                    } 
-                }
-                .dropdown-link {
-                    @include flex(flex-start, center, row);
-                    gap: 5px;
-                    @media (max-width:$menuWidth) {
-                        justify-content: flex-end;
-                        font-size: 13px;
+                        
                     }
                 }
                 .arrow_down {
@@ -409,67 +406,6 @@ ol.breadcrumb li {
         }
 
     }
-    // &__menu {
-    //     display: none;
-    //     width: 100%;
-    //     @media (max-width: $mobile) {
-    //         display: block;
-    //     }
-    // }
-    // &__menu__list.mobile-only {
-    //     display: none;
-    //     width: 100%;
-    //     #btn_mobile_menu_back {
-    //         padding: 15px 0;
-    //     }
-    //     li {
-    //         width: 100%;
-    //         border-bottom: 1px solid rgba(0, 0, 0, .1);
-    //         position: static;
-    //         cursor: pointer;
-    //         padding-top: 0;
-    //         padding-bottom: 0;
-    //         margin: 10px 0;
-    //         a {
-    //             display: block;
-    //             padding: 10px 0;
-    //         }
-    //     }
-    //     .header__submenu__list {
-    //         width: 100%;
-    //         height: 100vh;
-    //         // display: block;
-    //         display: none;
-    //         box-shadow: none;
-    //         top: 0;
-    //         // left: -400%;
-    //         // transition: all 0.1s ease;
-    //         li {
-    //             position: relative;
-    //             cursor: pointer;
-    //             &:last-child {
-    //                 border-bottom: none;
-    //             }
-    //         }
-    //         &.dropdown-active {
-    //             left: 0;
-    //             display: block;
-    //             transform: none;
-    //         }
-    //         .has-submenu {
-    //             &::before {
-    //                 top: 20px;
-    //                 left: -10px;
-    //             }
-    //         }
-            
-    //     }
-    //     @media (max-width:$mobile) { 
-    //         display: flex;
-    //         flex-direction: column;
-    //         align-items: flex-start;
-    //     }
-    // }
     &__submenu__list {
         @include flex(space-between, center, row);
         gap: 10px;
@@ -528,27 +464,6 @@ ol.breadcrumb li {
             padding: 0 0 10px 0;
         }
     }
-    .has-submenu {
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 29px;
-            left: 0;
-            width: 5px;
-            height: 8px;
-            background-image: url(./img/menu_arrow.svg);
-            background-position: 0 center;
-            background-repeat: no-repeat;
-        }
-    }
-    .header__second-submenu__list {
-        font-family: $font-montserrat;
-        display: none;
-        &.open {
-            color: $gray;
-        }
-    }
 }
 .dropdown-open {
     .dropdown-active {
@@ -602,76 +517,6 @@ ol.breadcrumb li {
         transform: rotate(45deg) translate(0px, 50%);
     }
 }
-// .menu {
-//     &__body {
-//         width: 500px;
-//         position: fixed;
-//         left: -200%;
-//         top: 0;
-//         background: #F6F6F6;
-//         transition: left 0.3s ease;
-//         height: 100vh; 
-//         overflow-y: scroll;
-//         &::-webkit-scrollbar { 
-//             width: 8px;
-//         }        
-//         &::-webkit-scrollbar-thumb {
-//             background: #C8C8C8; 
-//             border-radius: 4px;
-//         } 
-//         &._active {
-//            left: 0;
-//         }
-//         @media (max-width: $tablet) {
-//             width: 100%;
-//         }
-//     }
-//     &__title {
-//         @include font($font-montserrat, 20px, 24px, #000000); 
-//         text-transform: uppercase;
-//         padding: 20px 15px 25px;
-//     }
-//     &__list {
-//         &-item {
-//             @include font($font-montserrat, 13px, 15px, #000000); 
-//             > a {
-//                 display: inline-block;
-//                 margin-bottom: 12px;
-//                 padding-left: 15px; 
-//             }
-//         }
-//         .menu-item {
-//             padding: 4px 5px 4px 15px; 
-//             &._active {
-//                 @include font($font-montserrat, 13px, 15px, #FFFFFF); 
-//                 background-color: red;
-//                 display: inline-block;
-//                 width: 100%; 
-//             }
-//             &:hover {
-//                 @include font($font-montserrat, 13px, 15px, #FFFFFF);  
-//                 background-color: red;
-//                 display: inline-block;
-//                 width: 100%; 
-//             }
-//         }
-//     }
-// }
-// .menu__body .menu__list >.menu__sublist {
-//     max-width: none;
-//     margin-left: 0px;
-// }
-// .menu__body .menu__list >.menu__sublist >li {
-//     color: #FFFFFF !important;
-//     font-family: $font-montserrat;
-//     background-color: red;
-//     display: inline-block;
-//     width: 100%; 
-//     padding: 5px 20px;
-//     >a:hover {
-//         color: #FFFFFF !important;
-//     }
-// }
 
 .burger-menu { 
     position: relative;

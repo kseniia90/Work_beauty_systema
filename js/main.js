@@ -39,8 +39,12 @@ function dropDownFunc(dropDown) {
           this.querySelector(".arrow_down").classList.add("rotate");
         } 
       }
-      
     }
+    // close the dropdown on mouse out from the dropdown list
+document.querySelectorAll(".header__submenu__list").forEach(function (dropDownList) {
+  // close the dropdown after user leave the list
+  dropDownList.onmouseleave = closeDropdown;
+});
 } else {
     if (dropDown.classList.contains("dropdown-link") === true) {
       dropDown.addEventListener("click", function (e) {
@@ -68,10 +72,25 @@ function dropDownFunc(dropDown) {
   }
 }
 
+document.querySelectorAll(".header__nav-link > a").forEach(function(dropDown) {
+  if(window.innerWidth > 900){
+    if (dropDown.classList.contains("hover-dropdown") !== true) {
+      dropDown.onmouseover = dropDown.onmouseout = dropdownHover;
+      
+      function dropdownHover(e) {
+        if (e.type == "mouseover") {
+          // Close the opend dropdown
+          closeDropdown();
+        } 
+      }
+    }
+}
+});
+
 // Listen to the doc click
 window.addEventListener("click", function (e) {
   // Close the menu if click happen outside menu
-  if (e.target.closest("#btn_mobile_menu_back")) {
+  if (!e.target.closest(".header__nav__list")) {
     // Close the opend dropdown
     closeDropdown();
   }
@@ -79,36 +98,20 @@ window.addEventListener("click", function (e) {
 
 // Close the openend Dropdowns
 function closeDropdown() {
-  // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
-  document
-  .querySelectorAll(".header__nav-link")
-  .forEach(function (container) {
+ 
+  document.querySelectorAll(".header__nav-link").forEach(function (container) {
     container.classList.remove("dropdown-open");
-  
   });
 
   document.querySelectorAll(".header__submenu__list").forEach(function (menu) {
     menu.classList.remove("dropdown-active");
   });
 
-  document
-    .querySelectorAll(".arrow_down")
-    .forEach(function (container) {
-      container.classList.remove("rotate");
-      
-    });
-
-  // document.querySelector(".header__nav").style.paddingBottom = null;
-  // document.querySelector(".header__nav").style.marginBottom = null;
-}
-
-// close the dropdown on mouse out from the dropdown list
-document
-  .querySelectorAll(".header__submenu__list")
-  .forEach(function (dropDownList) {
-    // close the dropdown after user leave the list
-    dropDownList.onmouseleave = closeDropdown;
+  document.querySelectorAll(".arrow_down").forEach(function (container) {
+    container.classList.remove("rotate"); 
   });
+
+}
   // END
 
 $(function () {
