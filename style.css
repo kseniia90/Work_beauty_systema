@@ -373,7 +373,6 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1600px;
-  border: 1px solid red;
 }
 
 header, footer {
