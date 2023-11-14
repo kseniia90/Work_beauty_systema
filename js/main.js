@@ -16,7 +16,7 @@ document.addEventListener("click", function(event){
   }
 })
 
-// Get all the dropdown from document
+// dropdown menu START
 
 document.querySelectorAll(".dropdown-link").forEach(dropDownFunc);
 
@@ -112,10 +112,11 @@ function closeDropdown() {
   });
 
 }
-  // END
+  // dropdown menu END
 
 $(function () {
   // SLIDERS START
+
   // slider banner
   $(".banner-carousel").owlCarousel({
     dots: true,
@@ -125,22 +126,27 @@ $(function () {
   });
    
 
-  // slider categories
+ // slider categories
   $(".categories-carousel").owlCarousel({
     dots: true,
     nav:true,
     loop: true,
     margin: 30,
     autoWidth: true,
-    items:4,
+    items: 4,
+    slideBy: 1,
+    onInitialized: function() {
+      setTimeout(fadeSlides, 100)
+    },
+    onTranslated: fadeSlides,
   });
-  // var owlCategoriesActive = $(".categories-carousel .owl-item.active");
-  // var first = owlCategoriesActive[0]; //get first item
-  // var last = owlCategoriesActive[owlCategoriesActive.length - 1]; //get last item
 
-  // first.style.opacity = 0.1;
-  // last.style.opacity = 0.8;
-
+  function fadeSlides(e) {
+    $(".categories-carousel .owl-item").removeClass("opacity");
+    $(".categories-carousel .owl-item.active").first().addClass("opacity");
+    $(".categories-carousel .owl-item.active").last().addClass("opacity");
+  }
+  
   //slider popular
   $(".popular-carousel").owlCarousel({
     dots: true,
@@ -219,7 +225,7 @@ $(function () {
 
 	});
 
-//END
+  //END
 
   //BEGIN filters accordion
 
@@ -257,6 +263,15 @@ $(function () {
 
 	});
   //END
+
+  // open search form onclick
+  $(".header__main__list__item.search_icon").on("click", function(e) {
+
+		e.preventDefault();
+	
+		$(".header__main-form.search-form").toggleClass('open-search');
+
+	});
 
 });
 
