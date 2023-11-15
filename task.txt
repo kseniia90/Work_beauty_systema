@@ -1,0 +1,3 @@
+app:
+remove . hover
+buy button change arrow icon for <span class="icon-shopping_cart_icon"></span>

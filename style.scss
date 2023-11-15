@@ -473,53 +473,53 @@ ol.breadcrumb li {
         display: flex;
       }
 } 
-.menu__icon {
-    position: relative;
-    width: 26px;
-    height: 18px;
-    z-index: 5;
-    cursor: pointer;
-    transform: rotate(90deg);
-    @media (max-width: $tablet) {
-        transform: rotate(0deg);
-        margin-right: 25px;
-    }
-    & span,
-    &::before,
-    &::after {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 9%;
-        background-color: #FFFFFF;
-        transition: all 0.3s ease 0s;
-    }
-    &::before {
-        content: '';
-        top: 0;
-    }
-    &::after {
-        content: '';
-        bottom: 0;
-    }
-    & span {
-        top: 50%;
-        transform: scale(1) translate(0px, -50%);
-    }
-}
-.menu__icon._active {
-    & span {
-        transform: scale(0) translate(0px, -50%);
-    }
-    &::before {
-        top: 50%;
-        transform: rotate(-45deg) translate(0px, -50%);
-    }
-    &::after {
-        bottom: 50%;
-        transform: rotate(45deg) translate(0px, 50%);
-    }
-}
+// .menu__icon {
+//     position: relative;
+//     width: 26px;
+//     height: 18px;
+//     z-index: 5;
+//     cursor: pointer;
+//     transform: rotate(90deg);
+//     @media (max-width: $tablet) {
+//         transform: rotate(0deg);
+//         margin-right: 25px;
+//     }
+//     & span,
+//     &::before,
+//     &::after {
+//         position: absolute;
+//         left: 0;
+//         width: 100%;
+//         height: 9%;
+//         background-color: #FFFFFF;
+//         transition: all 0.3s ease 0s;
+//     }
+//     &::before {
+//         content: '';
+//         top: 0;
+//     }
+//     &::after {
+//         content: '';
+//         bottom: 0;
+//     }
+//     & span {
+//         top: 50%;
+//         transform: scale(1) translate(0px, -50%);
+//     }
+// }
+// .menu__icon._active {
+//     & span {
+//         transform: scale(0) translate(0px, -50%);
+//     }
+//     &::before {
+//         top: 50%;
+//         transform: rotate(-45deg) translate(0px, -50%);
+//     }
+//     &::after {
+//         bottom: 50%;
+//         transform: rotate(45deg) translate(0px, 50%);
+//     }
+// }
 
 .burger-menu { 
     position: relative;
@@ -745,7 +745,8 @@ ol.breadcrumb li {
                 border-radius: 5px;
                 background-color: white;
                 position: absolute;
-                bottom: -25px;
+                bottom: 0;
+                transform: translateY(50%);
                 @media (max-width: $mobile) {
                     width: 125px;
                     padding: 7px 5px;
@@ -803,7 +804,6 @@ ol.breadcrumb li {
 }
 
 .product__card {
-    position: relative;
     width: 100%;
     height: 100%;
     @include flex(flex-start, stretch, column);
@@ -828,8 +828,33 @@ ol.breadcrumb li {
             letter-spacing: 0.25px;
         }
     }
+    .icon-favorite_icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 2;
+        @include flex(center, center, row);
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        &::before {
+            padding-top: 2px;
+            padding-left: 2px;
+        }
+        &:hover {
+            color: white;
+            background-color: $blue;
+        }
+        &.active {
+            color: white;
+            background-color: $blue;
+        }
+    }
     &__img {
         display: block;
+        position: relative;
         width: 100%;
         height: 370px;
         border-bottom: 1px solid rgba(33, 50, 53, 0.20);
@@ -988,13 +1013,6 @@ ol.breadcrumb li {
                 opacity: 1;
             }
         }
-
-       
-
-
-
-
-
         .item {
             width: 370px;
             height: 100%;
@@ -1623,13 +1641,28 @@ ol.breadcrumb li {
                 left: 15px;
                 top: 15px;
             }
-            .product__card__icon {
-                width: 41px;
-                height: 41px;
+            .icon-favorite_icon {
                 position: absolute;
                 right: 15px;
                 top: 15px;
                 z-index: 2;
+                @include flex(center, center, row);
+                width: 41px;
+                height: 41px;
+                border-radius: 50%;
+                font-size: 32px;
+                transition: all 0.3s ease;
+                &::before {
+                    padding-top: 4px;
+                }
+                &:hover {
+                    color: white;
+                    background-color: $blue;
+                }
+                &.active {
+                    color: white;
+                    background-color: $blue;
+                }
             }
         }
         &__title {
@@ -1673,6 +1706,7 @@ ol.breadcrumb li {
                         color: white;
                         background-color: $blue;
                     }
+                    
                     @media (max-width: $mobile) {
                         font-size: 18px;
                     }

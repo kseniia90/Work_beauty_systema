@@ -20,6 +20,46 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-app_menu_discount::before {
+  content: "\e907";
+}
+
+.icon-app_menu_gifts::before {
+  content: "\e908";
+}
+
+.icon-app_menu_brands::before {
+  content: "\e909";
+}
+
+.icon-app_menu_makeup::before {
+  content: "\e90a";
+}
+
+.icon-app_menu_kids::before {
+  content: "\e90b";
+}
+
+.icon-app_menu_body::before {
+  content: "\e90c";
+}
+
+.icon-app_menu_hair::before {
+  content: "\e90d";
+}
+
+.icon-app_menu_face::before {
+  content: "\e90e";
+}
+
+.icon-app_menu_new::before {
+  content: "\e90f";
+}
+
+.icon-catalog_icon::before {
+  content: "\e906";
+}
+
 .icon-right-arrow::before {
   content: "\e905";
 }
