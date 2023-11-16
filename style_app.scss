@@ -29,8 +29,6 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 1000px;
-    border: 1px solid red;
-
 }
 header, footer {
     width: 100%;
@@ -632,6 +630,14 @@ h1, h2, h3 {
             background: #FFF;
             box-shadow: 5px 4px 18px 0px rgba(0, 0, 0, 0.05);
         }
+    }
+}
+.block_new__title {
+    @include flex(flex-start, flex-start, column);
+    gap: 20px;
+    margin-bottom: 30px;
+    .title {
+        margin: 0;
     }
 }
 .advantages__block__item {

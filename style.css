@@ -412,7 +412,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 
 header, footer {
@@ -1593,7 +1592,11 @@ ol.breadcrumb li .icon-Home-Page {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  gap: 20px;
   margin-bottom: 40px;
+}
+.block_new__title .title {
+  margin: 0;
 }
 @media (max-width: 768px) {
   .block_new__title {
