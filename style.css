@@ -765,7 +765,7 @@ ol.breadcrumb li .icon-Home-Page {
     transition: all 0.4s ease;
     height: 100vh;
     z-index: 20;
-    margin-top: 109px;
+    margin-top: 99px;
     background: #FFF;
   }
   .header__nav._active {
@@ -846,6 +846,7 @@ ol.breadcrumb li .icon-Home-Page {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
+    border-bottom: none;
   }
 }
 .header__nav .header-social {
