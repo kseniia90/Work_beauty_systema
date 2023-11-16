@@ -675,7 +675,7 @@ h1, h2, h3 {
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
-  padding: 57px 20px 100px;
+  padding: 57px 0 100px;
   position: fixed;
   left: -100%;
   top: 0;
@@ -721,7 +721,7 @@ h1, h2, h3 {
 }
 .header__nav__list .header__nav-link > a {
   transition: all 0.3s ease;
-  padding: 5px 0;
+  padding: 5px 20px 15px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -960,7 +960,7 @@ h1, h2, h3 {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   padding: 10px 10px 10px 0;
 }
 .product__card__info__content {
@@ -1093,7 +1093,7 @@ h1, h2, h3 {
 }
 .slider-popular .popular-carousel .item, .slider-popular .new-carousel .item, .slider-new .popular-carousel .item, .slider-new .new-carousel .item {
   height: 100%;
-  width: 370px;
+  max-width: 370px;
   border-radius: 10px;
   border: 1px solid rgba(64, 110, 117, 0.15);
   background: #FFF;
@@ -1523,25 +1523,6 @@ h1, h2, h3 {
 .categories__content__right .page_navigation .page_navigation__more:hover {
   color: #4B6D74;
 }
-.categories__content__right .page_navigation .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  border-top: 1px solid rgba(33, 50, 53, 0.2);
-  border-bottom: 1px solid rgba(33, 50, 53, 0.2);
-  gap: 20px;
-  width: 100%;
-}
-.categories__content__right .page_navigation .pagination .page-item {
-  padding: 10px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-}
-.categories__content__right .page_navigation .pagination .page-item.active {
-  border-top: 1px solid var(--accent, #4B6D74);
-  border-bottom: 1px solid var(--accent, #4B6D74);
-}
 
 .product-page {
   margin-bottom: 100px;
@@ -1778,17 +1759,6 @@ h1, h2, h3 {
   padding: 10px;
   border: none;
   border-bottom: 1px solid rgba(33, 50, 53, 0.2);
-}
-.product-page__content .reviews .add-review .add-review__file input {
-  display: none;
-}
-.product-page__content .reviews .add-review .add-review__file label {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  gap: 5px;
-  font-size: 12px;
 }
 .product-page__content .reviews .add-review .add-review__row {
   display: flex;

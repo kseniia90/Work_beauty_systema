@@ -152,14 +152,30 @@ $(function () {
     dots: true,
     nav:true,
     loop: true,
-    margin: 30,
-    center: true,
-    autoWidth: true,
     onInitialized: function(e) {
       setTimeout(fadeSlides, 100, e)
     },
     onTranslated: fadeSlides,
     onResized: fadeSlides,
+    responsive:{
+      0:{
+        items:1,
+        center: true,
+        autoWidth: true,
+        margin: 15,
+    },
+      360:{
+          items:2,
+          center: false,
+          autoWidth: false,
+          margin: 15,
+      },
+      500:{
+          center: true,
+          autoWidth: true,
+          margin: 30,
+      },
+    }
    });
 
   
@@ -169,14 +185,30 @@ $(function () {
     dots: true,
     nav:true,
     loop: true,
-    margin: 30,
-    center: true,
-    autoWidth: true,
     onInitialized: function(e) {
       setTimeout(fadeSlides, 100, e)
     },
     onTranslated: fadeSlides,
     onResized: fadeSlides,
+    responsive:{
+      0:{
+        items:1,
+        center: true,
+        autoWidth: true,
+        margin: 15,
+    },
+      360:{
+          items:2,
+          center: false,
+          autoWidth: false,
+          margin: 15,
+      },
+      500:{
+          center: true,
+          autoWidth: true,
+          margin: 30,
+      },
+    }
   });
 
   // slider advantages

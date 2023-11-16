@@ -89,8 +89,7 @@ h1, h2, h3 {
         img {
             width: 43px;
             height: 43px;
-        }
-        
+        }    
     }
 }
 
@@ -258,7 +257,7 @@ h1, h2, h3 {
         margin-bottom: 10px;
         @include flex(flex-start, flex-start, column);
         gap: 20px;
-        padding: 57px 20px 100px;
+        padding: 57px 0 100px;
         position: fixed;
         left: -100%;
         top: 0;
@@ -298,7 +297,7 @@ h1, h2, h3 {
                 }
                 >a {
                     transition: all 0.3s ease;
-                    padding: 5px 0;
+                    padding: 5px 20px 15px;
                     @include flex(flex-start, center, row);
                     gap: 5px;
                     font-size: 13px;
@@ -516,7 +515,7 @@ h1, h2, h3 {
     }
     &__info {
         @include flex(flex-start, flex-start, column);
-        gap: 5px;
+        gap: 10px;
         padding: 10px 10px 10px 0;
         &__content {
             flex: 1 0 auto;
@@ -627,7 +626,7 @@ h1, h2, h3 {
         }
         .item {
             height: 100%;
-            width: 370px;
+            max-width: 370px;
             border-radius: 10px;
             border: 1px solid rgba(64, 110, 117, 0.15);
             background: #FFF;
@@ -1016,22 +1015,6 @@ h1, h2, h3 {
                         color: $blue;
                     }
                 }
-                .pagination {
-                    @include flex(center, center, row);
-                    border-top: 1px solid rgba(33, 50, 53, 0.20);
-                    border-bottom: 1px solid rgba(33, 50, 53, 0.20);            
-                    gap: 20px;
-                    width: 100%;
-                    .page-item {
-                        padding: 10px;
-                        border-top: 1px solid transparent;
-                        border-bottom: 1px solid transparent;
-                        &.active {
-                            border-top: 1px solid var(--accent, #4B6D74);
-                            border-bottom: 1px solid var(--accent, #4B6D74);
-                        }
-                    }
-                }
             }
         }
     }
@@ -1242,16 +1225,16 @@ h1, h2, h3 {
                     border: none;
                     border-bottom: 1px solid rgba(33, 50, 53, 0.20);
                 }
-                .add-review__file {
-                    input {
-                        display: none;
-                    }
-                    label {
-                        @include flex(flex-start, center, row);
-                        gap: 5px;
-                        font-size: 12px;
-                    }
-                }
+                // .add-review__file {
+                //     input {
+                //         display: none;
+                //     }
+                //     label {
+                //         @include flex(flex-start, center, row);
+                //         gap: 5px;
+                //         font-size: 12px;
+                //     }
+                // }
                 .add-review__row {
                     @include flex(flex-start, flex-start, column);
                     gap: 20px;
