@@ -1443,7 +1443,7 @@ ol.breadcrumb li .icon-Home-Page {
 }
 .product__card__info__variants-option a {
   display: block;
-  padding: 4px 15px;
+  padding: 8px 15px;
 }
 @media (max-width: 768px) {
   .product__card__info__variants-option {
@@ -2335,6 +2335,17 @@ ol.breadcrumb li .icon-Home-Page {
 @media (max-width: 768px) {
   .product-page__content__right .product__card__info__variants .product__card__info__variants-option {
     font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .product-page__content .product__card__info__buy-button {
+    padding: 15px 25px;
+    gap: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    width: 100%;
+    color: white;
+    background-color: #4B6D74;
   }
 }
 .product-page__content__price-block {

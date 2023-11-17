@@ -1625,14 +1625,14 @@ h1, h2, h3 {
 .product-page__content__right .product__card__info__variants .product__card__info__variants-option {
   transition: all 0.3s ease;
   font-size: 18px;
-  padding: 4px 15px;
+  padding: 8px 15px;
 }
 .product-page__content__price-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 15px;
 }
 .product-page__content__price-block .product__card__info__price {
   display: flex;
@@ -1653,8 +1653,13 @@ h1, h2, h3 {
   opacity: 1;
 }
 .product-page__content .product__card__info__buy-button {
-  padding: 15px 50px;
+  padding: 15px 25px;
   font-size: 17px;
+}
+@media (max-width: 390px) {
+  .product-page__content .product__card__info__buy-button {
+    padding: 15px 20px;
+  }
 }
 .product-page__content .subtitle16 {
   margin: 15px 0;

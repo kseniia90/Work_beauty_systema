@@ -905,7 +905,7 @@ ol.breadcrumb li {
                 }
                 a {
                     display: block;
-                    padding: 4px 15px;
+                    padding: 8px 15px;
                 }
                 @media (max-width: $mobile) {
                     font-size: 9px;
@@ -1692,6 +1692,17 @@ ol.breadcrumb li {
                         font-size: 18px;
                     }
                 } 
+            }
+        }
+        .product__card__info__buy-button {
+            @media (max-width: $mobile) {
+                padding: 15px 25px;
+                gap: 10px;
+                border-radius: 10px;
+                font-size: 17px;
+                width: 100%;
+                color: white;
+                background-color: $blue;
             }
         }
         &__price-block {
