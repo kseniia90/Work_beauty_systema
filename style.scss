@@ -905,7 +905,10 @@ ol.breadcrumb li {
                 }
                 a {
                     display: block;
-                    padding: 8px 15px;
+                    padding: 4px 15px;
+                    @media (max-width: $mobile) {
+                        padding: 4px 9px;
+                    }
                 }
                 @media (max-width: $mobile) {
                     font-size: 9px;
@@ -1683,6 +1686,10 @@ ol.breadcrumb li {
                 margin: 20px 0;
                 .product__card__info__variants-option {
                     transition: all 0.3s ease;
+                    a {
+                        display: block;
+                        padding: 8px 15px;
+                    }
                     &:hover {
                         color: white;
                         background-color: $blue;

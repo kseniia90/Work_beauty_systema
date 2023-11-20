@@ -1443,7 +1443,12 @@ ol.breadcrumb li .icon-Home-Page {
 }
 .product__card__info__variants-option a {
   display: block;
-  padding: 8px 15px;
+  padding: 4px 15px;
+}
+@media (max-width: 768px) {
+  .product__card__info__variants-option a {
+    padding: 4px 9px;
+  }
 }
 @media (max-width: 768px) {
   .product__card__info__variants-option {
@@ -2327,6 +2332,10 @@ ol.breadcrumb li .icon-Home-Page {
 }
 .product-page__content__right .product__card__info__variants .product__card__info__variants-option {
   transition: all 0.3s ease;
+}
+.product-page__content__right .product__card__info__variants .product__card__info__variants-option a {
+  display: block;
+  padding: 8px 15px;
 }
 .product-page__content__right .product__card__info__variants .product__card__info__variants-option:hover {
   color: white;
