@@ -1867,6 +1867,7 @@ ol.breadcrumb li .icon-Home-Page {
   align-items: flex-start;
   flex-direction: row;
   gap: 30px;
+  width: 100%;
 }
 @media (max-width: 992px) {
   .categories__content {
@@ -2136,15 +2137,23 @@ ol.breadcrumb li .icon-Home-Page {
     text-align: left;
   }
 }
+.categories__content__right {
+  width: 100%;
+}
 .categories__content__right .categories-result {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   flex-direction: row;
   gap: 20px;
   flex-wrap: wrap;
   margin: 0 auto 40px;
   padding: 10px;
+}
+@media (max-width: 1300px) {
+  .categories__content__right .categories-result {
+    justify-content: center;
+  }
 }
 @media (max-width: 768px) {
   .categories__content__right .categories-result {
@@ -2212,6 +2221,12 @@ ol.breadcrumb li .icon-Home-Page {
 }
 .categories__content__right .page_navigation .page_navigation__more:hover {
   color: #4B6D74;
+}
+.categories__content.noveltys .categories__content__left, .categories__content.noveltys .categories-sorting, .categories__content.noveltys .page_navigation.pagination {
+  display: none;
+}
+.categories__content.noveltys .page_navigation__more {
+  display: flex;
 }
 
 .product-page__content {
