@@ -25,7 +25,7 @@
                                 <a href="#"><span class="icon-user_icon"></span></a>
                             </li>
                             <li class="header__main__list__item">
-                                <a href="#">
+                                <a href="./favorite list.html">
                                     <span class="icon-favorite_icon"></span>
                                     <div class="header__counter favorite__counter">
                                         <span class="header__counter__value favorite__counter__value">3</span>
@@ -34,24 +34,90 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="consultation-tg-link">
+                        <a target="_blank" href="https://t.me/nbsofttech">
+                            <span class="icon-contacts_tg" style="font-size: 18px;"></span>
+                            <span>Консультація телеграм</span>
+                        </a>
+                    </div>
                     <div class="header__main__logo">
-                        <a class="header__main-logo" href="index.html"><img src="./img/logo.png" alt="logo" width="291"
-                                height="70"></a>
+                        <a class="header__main-logo" href="index.html"><img src="./img/logo.png" alt="logo"></a>
                     </div>
                     <div class="header__main-right">
+                        <nav class="header__main__nav">
+                            <ul class="header__main__nav__list">
+                                <li>
+                                    <a href="./error_page.html">Акції</a>
+                                </li>
+                                <li>
+                                    <a href="./error_page.html">Доставка та оплата</a>
+                                </li>
+                                <li>
+                                    <a href="./error_page.html">Програма лояльнсті</a>
+                                </li>
+                                <li>
+                                    <a href="./error_page.html">Блог</a>
+                                </li>
+                                <li>
+                                    <a href="./error_page.html">Про компанію</a>
+                                </li>
+                                <li>
+                                    <a href="./contacts.html">Контакти</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <ul class="header__main__list">
-                            <li class="header__main__list__item search_icon">
-                                <a href="#">
-                                    <span class="icon-search_icon"></span>
+                            <li class="header__main__list__item hide-on-mobile">
+                                <a href="./favorite list.html" class="favorite has-items">
+                                   <span class="icon-favorite_icon"></span>
+                                    <span class="icon-favorite_label"></span>
+                                    <div class="header__counter favorite__counter">
+                                        <span class="header__counter__value favorite__counter__value">3</span>
+                                    </div>
                                 </a>
                             </li>
-                            <li class="header__main__list__item">
-                                <a href="#">
+                            <li class="header__main__list__item hide-on-mobile">
+                                <a href="#"><span class="icon-user_icon authorized"></span></a>
+                            </li>
+                            <li class="header__main__list__item header__main__list__item-cart">
+                                <a href="./cart.html" class="mini-cart-dropdown-link">
                                     <span class="icon-shopping_cart_icon"></span>
                                     <div class="header__counter shopping_cart__counter">
                                         <span class="header__counter__value shopping_cart__counter__value">2</span>
                                     </div>
                                 </a>
+                                <div class="mini-cart-body">
+                                    <ul class="mini-cart-list">
+                                        <li class="mini-cart-list__item">
+                                            <a href="./product_page.html" class="mini-cart-list__item-product">
+                                                <img width="70" height="70" src="./img/popular_2.png" class="product-image" alt="">
+                                                <span>Очищуючий гель для проблемної шкіри Acnemy ZITCLEAN</span>
+                                             </a>
+                                             <div class="mini-cart-list__item-product__total">
+                                                <span class="mini-cart-list__item-product-quantity">1</span><span>×</span>
+                                                <span class="mini-cart-list__item-product-amount">756.00</span><span>₴</span>
+                                            </div>
+                                            <!-- <a href="#"class="mini-cart-list__item-product__remove">
+                                                <span class="icon-Close"></span>
+                                            </a> -->
+                                        </li>                                
+                                    </ul>
+                                    <p class="mini-cart__total">
+                                        <strong>Разом:</strong> 
+                                        <span class="mini-cart__total-amount">1,064&nbsp;</span><span>₴</span>
+                                    </p>
+                                    <div class="mini-cart__buttons">
+                                        <a href="./cart.html" class="mini-cart__button">
+                                            <span>Переглянути кошик</span>
+                                            <span class="icon-right-arrow"></span>
+                                        </a>
+                                        <a href="./cart.html" class="mini-cart__button">
+                                            <span>Оформлення замовлення</span>
+                                            <span class="icon-right-arrow"></span>
+                                        </a>
+                                    </div>
+                                    <p class="mini-cart__empty-message">Немає товарів у кошику</p>
+                                </div>
                             </li>
                             <li class="header__main__list__item burger-menu">
                                 <div class="burger-menu-btn">
@@ -63,169 +129,307 @@
                         </ul>
                     </div>
                 </div>
-                <form action="#" class="header__main-form search-form">
-                    <input class="header__main-input" type="text" placeholder="Пошук..." />
-                    <button class="header__main-search"><span class="icon-search_icon"></span></button>
-                    <div class="search-results">
-                        <div class="search-result-item"><a href="#"></a>
-                        </div>
+                <div class="header__search-block">
+                    <div class="header__main__logo">
+                        <a class="header__main-logo" href="index.html"><img src="./img/logo.png" alt="logo"></a>
                     </div>
-                </form>
+                    <form action="#" class="header__main-form search-form">
+                        <input class="header__main-input" type="text" placeholder="Пошук..." />
+                        <button class="header__main-search"><span class="icon-search_icon"></span></button>
+                        <div class="search-results">
+                            <div class="search-results__items">
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/popular_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/insta_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/insta_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/insta_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/insta_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/insta_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/insta_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="search-result-item">
+                                    <a href="#">
+                                        <div class="search-result-item__img">
+                                            <img src="./img/insta_1.png" alt="">
+                                        </div>
+                                        <div class="search-result-item__info">
+                                            <p class="search-result-item__header">Гідрофільна олія Beauty of Joseon
+                                                Ginseng Cleansing Oil, 210 мл</p>
+                                            <p class="search-result-item__price">₴745</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="search-results__button">
+                                <a href="#" class="product__card__info__button">Перейти до пошуку</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <nav class="header__nav">
                     <ul class="header__nav__list">
+                        <li class="header__nav-link">
+                            <a href="./index.html">Головна</a>
+                        </li>
+                        <li class="header__nav-link">
+                            <a href="./error_page.html">Бренди</a>
+                        </li>
                         <li class="header__nav-link">
                             <a href="./categoris new.html">Новинки</a>
                         </li>
                         <li class="header__nav-link">
-                            <a class="dropdown-link hover-dropdown" href="./categoris.html">
-                                <span>Догляд за шкірою обличчя</span>
-                                <img src="./img/arrow_down.svg" alt="" class="arrow_down">
+                            <a href="./error_page.html">Догляд для дітей</a>
+                        </li>
+                        <li class="header__nav-link">
+                            <a href="./error_page.html">Волосся</a>
+                        </li>
+                        <li class="header__nav-link">
+                            <a class="dropdown-link hover-dropdown" href="./error_page.html">
+                                <span>Тіло</span>
+                                <span class="icon-arrow_down arrow_down"></span>
                             </a>
                             <div class="header__submenu__list">
                                 <ul>
-                                    <li><a href="categoris.html"><span>Усі засоби</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Догляд за обличчям</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Область навколо очей</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Шия та декольте</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Брови та вії</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Губи</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>SPF та автозасмага</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Спеціальний догляд</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
+                                    <li><a href="./categoris.html"><span>Усі засоби</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li class="has-submenu">
+                                        <a href="./error_page.html">
+                                            <span>Догляд за обличчям</span>
+                                            <span class="icon-arrow_down arrow_down submenu__arrow"></span>
+                                        </a>
+                                        <ul class="header__second-submenu__list">
+                                            <li><a href="./error_page.html">111111111111</a></li>
+                                            <li><a href="./error_page.html">111111111111</a></li>
+                                            <li><a href="./error_page.html">111111111111</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="./error_page.html">
+                                            <span>Догляд за обличчям</span>
+                                            <span class="icon-arrow_down arrow_down submenu__arrow"></span>
+                                        </a>
+                                        <ul class="header__second-submenu__list">
+                                            <li><a href="./error_page.html">111111111111</a></li>
+                                            <li><a href="./error_page.html">111111111111</a></li>
+                                            <li><a href="./error_page.html">111111111111</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./categoris.html"><span>Область навколо очей</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Шия та декольте</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Брови та вії</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Губи</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>SPF та автозасмага</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Спеціальний догляд</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
                                 </ul>
                                 <img src="./img/sublist_img.png" alt="img">
                             </div>
                         </li>
                         <li class="header__nav-link">
-                            <a class="dropdown-link hover-dropdown" href="categoris.html">
-                                <span>Догляд за волоссям</span>
-                                <img src="./img/arrow_down.svg" alt="" class="arrow_down">
+                            <a class="dropdown-link hover-dropdown" href="#">
+                                <span>Шкіра обличчя</span>
+                                <span class="icon-arrow_down arrow_down"></span>
                             </a>
                             <div class="header__submenu__list">
                                 <ul>
-                                    <li><a href="categoris.html"><span>Усі засоби</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Догляд за обличчям</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Область навколо очей</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Шия та декольте</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Брови та вії</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Губи</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>SPF та автозасмага</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Спеціальний догляд</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
+                                    <li><a href="./categoris.html"><span>Усі засоби</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Догляд за обличчям</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Область навколо очей</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Шия та декольте</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Брови та вії</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Губи</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>SPF та автозасмага</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Спеціальний догляд</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
                                 </ul>
                                 <img src="./img/categories_carousel_img2.png" alt="img">
                             </div>
                         </li>
                         <li class="header__nav-link">
-                            <a class="dropdown-link hover-dropdown" href="categoris.html">
-                                <span>Догляд за тілом</span>
-                                <img src="./img/arrow_down.svg" alt="" class="arrow_down">
-                            </a>
-                            <div class="header__submenu__list">
-                                <ul>
-                                    <li><a href="categoris.html"><span>Усі засоби</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Догляд за обличчям</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Область навколо очей</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Шия та декольте</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Брови та вії</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Губи</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>SPF та автозасмага</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Спеціальний догляд</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                </ul>
-                                <img src="./img/sublist_img.png" alt="img">
-                            </div>
-                        </li>
-                        <li class="header__nav-link">
-                            <a class="dropdown-link hover-dropdown" href="categoris.html">
-                                <span>Догляд для дітей</span>
-                                <img src="./img/arrow_down.svg" alt="" class="arrow_down">
-                            </a>
-                            <div class="header__submenu__list">
-                                <ul>
-                                    <li><a href="categoris.html"><span>Усі засоби</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Догляд за обличчям</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Область навколо очей</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Шия та декольте</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Брови та вії</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Губи</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>SPF та автозасмага</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Спеціальний догляд</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                </ul>
-                                <img src="./img/sublist_img.png" alt="img">
-                            </div>
-                        </li>
-                        <li class="header__nav-link">
-                            <a class="dropdown-link hover-dropdown" href="categoris.html">
+                            <a class="dropdown-link hover-dropdown" href="./categoris.html">
                                 <span>Макіяж</span>
-                                <img src="./img/arrow_down.svg" alt="" class="arrow_down">
+                                <span class="icon-arrow_down arrow_down"></span>
                             </a>
                             <div class="header__submenu__list">
                                 <ul>
-                                    <li><a href="categoris.html"><span>Усі засоби</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Догляд за обличчям</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Область навколо очей</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Шия та декольте</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Брови та вії</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Губи</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>SPF та автозасмага</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="categoris.html"><span>Спеціальний догляд</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
+                                    <li><a href="./categoris.html"><span>Усі засоби</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Догляд за обличчям</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Область навколо очей</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Шия та декольте</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Брови та вії</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Губи</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>SPF та автозасмага</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Спеціальний догляд</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
                                 </ul>
                                 <img src="./img/sublist_img.png" alt="img">
                             </div>
+                        </li>
+                        <li class="header__nav-link">
+                            <a href="./error_page.html">Подарунки</a>
+                        </li>
+                        <li class="header__nav-link">
+                            <a href="./error_page.html">Пробник</a>
                         </li>
                         <li class="header__nav-link">
                             <a class="dropdown-link hover-dropdown" href="#">
-                                <span>Бренди</span>
-                                <img src="./img/arrow_down.svg" alt="" class="arrow_down">
+                                <span>Ротова порожнина</span>
+                                <span class="icon-arrow_down arrow_down"></span>
                             </a>
                             <div class="header__submenu__list">
                                 <ul>
-                                    <li><a href="#"><span>Усі засоби</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Догляд за обличчям</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Область навколо очей</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Шия та декольте</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Брови та вії</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Губи</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>SPF та автозасмага</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Спеціальний догляд</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
+                                    <li><a href="./categoris.html"><span>Усі засоби</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Догляд за обличчям</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Область навколо очей</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Шия та декольте</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Брови та вії</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Губи</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>SPF та автозасмага</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
+                                    <li><a href="./categoris.html"><span>Спеціальний догляд</span><span
+                                                class="icon-arrow_down arrow_down submenu__arrow"></span></a></li>
                                 </ul>
                                 <img src="./img/sublist_img.png" alt="img">
                             </div>
-                        </li>
-                        <li class="header__nav-link">
-                            <a class="dropdown-link hover-dropdown" href="#">
-                                <span>Подарунки</span>
-                                <img src="./img/arrow_down.svg" alt="" class="arrow_down">
-                            </a>
-                            <div class="header__submenu__list">
-                                <ul>
-                                    <li><a href="#"><span>Усі засоби</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Догляд за обличчям</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Область навколо очей</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Шия та декольте</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Брови та вії</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Губи</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>SPF та автозасмага</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                    <li><a href="#"><span>Спеціальний догляд</span><img src="./img/arrow_down.svg" alt="" class="submenu__arrow"></a></li>
-                                </ul>
-                                <img src="./img/sublist_img.png" alt="img">
-                            </div>
-                        </li>
-                        <li class="header__nav-link">
-                            <a href="#">
-                                <span>Знижки</span>
-                            </a>
                         </li>
                     </ul>
-                    <div class="header-social">
-                        <a href="#"><img src="./img/Instagram_icon.svg" alt=""></span></a>
-                        <a href="#"><img src="./img/Phone_icon.svg" alt=""></span></a>
-                        <a href="#"><img src="./img/Letter_icon.svg" alt=""></span></a>
+                    <ul class="header__main__nav__list">
+                        <li>
+                            <a href="./error_page.html">Акції</a>
+                        </li>
+                        <li>
+                            <a href="./error_page.html">Доставка та оплата</a>
+                        </li>
+                        <li>
+                            <a href="./error_page.html">Програма лояльнсті</a>
+                        </li>
+                        <li>
+                            <a href="./error_page.html">Блог</a>
+                        </li>
+                        <li>
+                            <a href="./error_page.html">Про компанію</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html">Контакти</a>
+                        </li>
+                    </ul>
+                    <div class="header-contacts">
+                        <h4>Зв’язатись з нами</h4>
+                        <a href="tel:+38073938393">+38 (073) 193 83 93</a>
+                        <a href="mailto:beautysystema@gmail.com">beautysystema@gmail.com</a>
+                        <div class="header-social">
+                            <a href="#"><img src="./img/Instagram_icon.svg" alt=""></a>
+                            <a href="#"><img src="./img/Phone_icon.svg" alt=""></a>
+                            <a href="#"><img src="./img/Letter_icon.svg" alt=""></a>
+                        </div>
                     </div>
+
                 </nav>
             </div>
         </header>
         <main class="main" >
             <ol class="breadcrumb container">
-                <li class="breadcrumb-item"><a href="index.html"><span class="icon-Home-Page"></span></a></li>
+                <li class="breadcrumb-item"><a href="#"><span class="icon-Home-Page"></span></a></li>
                 <li class="breadcrumb-item active">Догляд за шкірою обличчя</li>
             </ol>
             <div class="container categories">
@@ -404,6 +608,42 @@
                                                     <div class="product__card__info__reviews-satr"></div>
                                                     <div class="product__card__info__reviews-satr light-star"></div>
                                                 </div>
+                                            </div>
+                                            <div class="product__card__info__price">
+                                                <p class="old-price">₴999,00</p>
+                                                <p>₴938,00</p>
+                                            </div>
+                                            <div class="product__card__info__buy-button">
+                                                <span>Додати до кошика</span>
+                                                <span class="icon-right-arrow"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="categories-result__item"> 
+                                <a href="#">
+                                    <div class="product__card">
+                                        <a class="product__card__img out-of-stock" href="product_page.html">
+                                            <img src="./img/popular_1.png" alt="img">
+                                            <p class="product__card__lable">Розпродаж</p>
+                                            <span class="icon-favorite_icon"></span>
+                                        </a>
+                                        <div class="product__card__info">
+                                            <div class="product__card__info__content">
+                                                <p class="product__card__info__description">Гелі</p>
+                                                <a href="#" class="product__card__info__name">Очищаючий засіб для миття тіла Acnemy ZITBODY, 200 мл</a>
+                                                <div class="product__card__info__reviews">
+                                                    <div class="product__card__info__reviews-satr"></div>
+                                                    <div class="product__card__info__reviews-satr"></div>
+                                                    <div class="product__card__info__reviews-satr"></div>
+                                                    <div class="product__card__info__reviews-satr"></div>
+                                                    <div class="product__card__info__reviews-satr light-star"></div>
+                                                </div>
+                                                <select class="product__card__info__variants">
+                                                    <option value="80">80 мл</option>
+                                                    <option value="100">100 мл </option>
+                                                </select>
                                             </div>
                                             <div class="product__card__info__price">
                                                 <p class="old-price">₴999,00</p>
